@@ -3,7 +3,7 @@
 {% load staticfiles %}
 {% load base_tags %}
 
-{% block title %} {% trans "Welcome!" %} - {{ block.super }} {% endblock %}
+{% block title %} Willkomen bei der Sammlung Woldan {% endblock %}
 
 {% block body_class %}home{% endblock %}
 
@@ -11,22 +11,17 @@
   {% block hero %}
   <div class="jumbotron">
   	<div class="container">
-  		<h1>{% trans "Welcome" %}</h1>
+  		<h1>{% trans "Sammlung Woldan" %}                                    <img src=/static/geonode/img/SW-LOGO.jpg height=150 /> </h1>
   		<p></p>
-  		<p>{% blocktrans %}GeoNode is an open source platform for sharing geospatial data and maps.{% endblocktrans %}</p>
-		<p>{% blocktrans %}If you have any questions about the software or service, join our <a href="http://lists.osgeo.org/cgi-bin/mailman/listinfo/geonode-users">mailing list</a>.{% endblocktrans %}</p>
-  		<a class="btn btn-default btn-lg" target="_blank" href="http://docs.geonode.org/en/master/tutorials/users/index.html" role="button">{% blocktrans %}Get Started &raquo;{% endblocktrans %}</a>
   	</div>
   </div>
-  {% include "_status_message.html" %}
-  {% include "_announcements.html" %}
-  {% include "_messages.html" %}
+
   {% endblock %}
 
   {% block mainbody %}
   <div class="big-search">
   	<div class="container">
-  		<h1>{% trans "Search for Data." %}</h1>
+  		<h1>Suche Karten</h1>
   		<div class="search">
   			<form id="search" action="{% url "search" %}" >
   				<span class="fa fa-search fa-2x"></span>
@@ -37,7 +32,7 @@
   				{% endif %}
   			</form>
   		</div>
-  		<p><a class="btn btn-default btn-lg" href="/search/">Advanced Search</a></p>
+  		<p><a class="btn btn-default btn-lg" href="/search/">Erweiterte Suche</a></p>
   	</div>
   </div>
 
@@ -46,142 +41,136 @@
   	<div class="container">
   		<div class="row">
   			<div class="container text-center">
-  				<h1>Discover the available datasets.</h1>
+  				<h1>Entdecke Karten</h1>
+
   				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=boundaries&category__identifier__in=planningCadastre" data-toggle="tooltip" data-placement="auto"
-  						title="Political and administrative boundaries. Land use maps, zoning maps, cadastral surveys, land ownership.">
+  					<a href="/search/?keywords__slug__in=15-jahrhundert" data-toggle="tooltip" data-placement="auto"
+  						title="15. Jahrhundert" >
   						<div class="category">
-  							<i class="fa fa-flag fa-4x"></i>
-  							<h4>Boundaries</h4>
+                <img src=/static/geonode/img/wd_15jhd.jpg height=100 />
+  							<h4>15. Jahrhundert</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=structure&category__identifier__in=intelligenceMilitary&category__identifier__in=utilitiesCommunication" data-toggle="tooltip" data-placement="auto"
-  						title="Buildings, museums, churches, factories, housing, monuments, shops, towers. Energy, water and waste systems and communications infrastructure and services. Military bases, structures, activities." >
+
+          <div class="col-xs-4 col-sm-2">
+  					<a href="/search/?keywords__slug__in=16-jahrhundert" data-toggle="tooltip" data-placement="auto"
+  						title="16. Jahrhundert" >
   						<div class="category">
-  							<i class="fa fa-home fa-4x"></i>
-  							<h4>Buildings</h4>
+  							<img src=/static/geonode/img/wd_16jhd.jpg height=100 />
+  							<h4>16. Jahrhundert</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=climatologyMeteorologyAtmosphere" data-toggle="tooltip" data-placement="auto"
-  						title="Cloud cover, weather, climate, atmospheric conditions, climate change, precipitation" >
+
+
+          <div class="col-xs-4 col-sm-2">
+  					<a href="/search/?keywords__slug__in=17-jahrhundert" data-toggle="tooltip" data-placement="auto"
+  						title="17. Jahrhundert" >
   						<div class="category">
-  							<i class="fa fa-umbrella fa-4x"></i>
-  							<h4>Climate</h4>
+  							<img src=/static/geonode/img/wd_17jhd.jpg height=100 />
+  							<h4>17. Jahrhundert</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=elevation" data-toggle="tooltip" data-placement="auto"
-  						title="Altitude, bathymetry, digital elevation models, slope, derived products" >
+
+          <div class="col-xs-4 col-sm-2">
+  					<a href="/search/?keywords__slug__in=18-jahrhundert" data-toggle="tooltip" data-placement="auto"
+  						title="18. Jahrhundert" >
   						<div class="category">
-  							<i class="fa fa-level-up fa-4x"></i>
-  							<h4>Elevation</h4>
+  							<img src=/static/geonode/img/wd_18jhd.jpg height=100 />
+  							<h4>18. Jahrhundert</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=geoscientificInformation" data-toggle="tooltip" data-placement="auto"
-  						title="Geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, erosion." >
+
+          <div class="col-xs-4 col-sm-2">
+  					<a href="/search/?keywords__slug__in=19-jahrhundert" data-toggle="tooltip" data-placement="auto"
+  						title="19. Jahrhundert" >
   						<div class="category">
-  							<i class="fa fa-globe fa-4x"></i>
-  							<h4>Geology</h4>
+  							<img src=/static/geonode/img/wd_19jhd.jpg height=100 />
+  							<h4>19. Jahrhundert</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=health" data-toggle="tooltip" data-placement="auto"
-  						title="Health, health services, human ecology, and safety." >
+
+          <div class="col-xs-4 col-sm-2">
+  					<a href="/search/?keywords__slug__in=20-jahrhundert" data-toggle="tooltip" data-placement="auto"
+  						title="20. Jahrhundert" >
   						<div class="category">
-  							<i class="fa fa-medkit fa-4x"></i>
-  							<h4>Health</h4>
+  							<img src=/static/geonode/img/wd_20jhd.jpg height=100 />
+  							<h4>20. Jahrhundert</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=imageryBaseMapsEarthCover" data-toggle="tooltip" data-placement="auto"
-  						title="Land cover, topographic maps, imagery, unclassified images, annotations." >
+
+          <div class="col-xs-4 col-sm-2">
+  					<a href="/search/?&category__identifier__in=weltkarte" data-toggle="tooltip" data-placement="auto"
+  						title="Weltkarten" >
   						<div class="category">
-  							<i class="fa fa-tree fa-4x"></i>
-  							<h4>Land Cover</h4>
+  							<img src=/static/geonode/img/wd_weltkarte.png height=100 />
+  							<h4>Weltkarten</h4>
   						</div>
   					</a>
   				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=biota&category__identifier__in=farming&category__identifier__in=environment" data-toggle="tooltip" data-placement="auto"
-  						title="Wildlife, vegetation, biological sciences, ecology, wilderness, sealife, wetlands, habitat. Environmental resources, protection and conservation. Agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock" >
-  						<div class="category">
-  							<i class="fa fa-leaf fa-4x"></i>
-  							<h4>Nature</h4>
-  						</div>
-  					</a>
-  				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=location" data-toggle="tooltip" data-placement="auto"
-  						title="Addresses, geodetic networks, control points, postal zones and services, place names" >
-  						<div class="category">
-  							<i class="fa fa-map-marker fa-4x"></i>
-  							<h4>Places</h4>
-  						</div>
-  					</a>
-  				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=economy&category__identifier__in=society" data-toggle="tooltip" data-placement="auto"
-  						title="Settlements, anthropology, archaeology, education, traditional beliefs, demographic data, crime and justice, census information. Economic activities, conditions and employment." >
-  						<div class="category">
-  							<i class="fa fa-male fa-4x"></i>
-  							<h4>Population</h4>
-  						</div>
-  					</a>
-  				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=transportation" data-toggle="tooltip" data-placement="auto"
-  						title="Roads, airports/airstrips, shipping routes, tunnels, nautical charts, vehicle or vessel location, aeronautical charts, railways." >
-  						<div class="category">
-  							<i class="fa fa-road fa-4x"></i>
-  							<h4>Transportation</h4>
-  						</div>
-  					</a>
-  				</div>
-  				<div class="col-xs-4 col-sm-2">
-  					<a href="/search/?limit=100&offset=0&category__identifier__in=inlandWaters&category__identifier__in=oceans" data-toggle="tooltip" data-placement="auto"
-  						title="Rivers and glaciers, salt lakes, water utilization plans, dams, currents, floods. Water quality, hydrographic charts, tides, tidal waves, coastal information, reefs." >
-  						<div class="category">
-  							<i class="fa fa-tint fa-4x"></i>
-  							<h4>Water</h4>
-  						</div>
-  					</a>
-  				</div>
-  			</div>
+
+          <div class="col-xs-4 col-sm-2">
+            <a href="/search/?&category__identifier__in=kontinentalkarte" data-toggle="tooltip" data-placement="auto"
+              title="Kontinentalkarten" >
+              <div class="category">
+                <img src=/static/geonode/img/wd_kontinentalkarte.png height=100 />
+                <h4>Kontinentalkarten</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-sm-2">
+            <a href="/search/?&category__identifier__in=regionalkarte" data-toggle="tooltip" data-placement="auto"
+              title="Regionalkarten" >
+              <div class="category">
+                <img src=/static/geonode/img/wd_regionalkarte.png height=100 />
+                <h4>Regionalkarten</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-sm-2">
+            <a href="/search/?&category__identifier__in=umgebungskarte" data-toggle="tooltip" data-placement="auto"
+              title="Umgebungskarten" >
+              <div class="category">
+                <img src=/static/geonode/img/wd_umgebungskarte.png height=100 />
+                <h4>Umgebungskarten</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-sm-2">
+            <a href="/search/?&category__identifier__in=stadtpläne" data-toggle="tooltip" data-placement="auto"
+              title="Stadtpläne" >
+              <div class="category">
+                <img src=/static/geonode/img/wd_stadtplan.png height=100 />
+                <h4>Stadtpläne</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-sm-2">
+            <a href="/search/?&category__identifier__in=globus" data-toggle="tooltip" data-placement="auto"
+              title="Globen" >
+              <div class="category">
+                <img src=/static/geonode/img/wd_globen.png height=100 />
+                <h4>Globen</h4>
+              </div>
+            </a>
+          </div>
+
+    		</div>
   		</div>
   	</div>
   </section>
   {% endblock %}
 
-  {% block showcase %}
-  <section id="showcase">
-    <div class="container">
-      <div class="row">
-        <h2>Featured Datasets</h2>
-        {% verbatim %}
-        <div ng-app="featured">
-          <div ng-repeat="item in featured | limitTo:4">
-            <div class="col-md-3">
-              <a href="{{ item.detail_url }}"><img ng-src="{{ item.thumbnail_url }}" /></a>
-              <h4>{{ item.title | limitTo: 20 }}{{item.title.length > 20 ? '...' : ''}}</h4>
-            </div>
-          </div>
-        </div>
-  		{% endverbatim %}
-      </div>
-      <p><a href="/search/">Explore all datasets</a></p>
-    </div>
-  </section>
-  {% endblock %}
-
+  
   {% endblock %}
 
 {% endblock %}
