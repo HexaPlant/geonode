@@ -51,15 +51,15 @@
 	      <ul class="nav navbar-nav toolbar">
 	        {% block tabs %}
 	        <li id="nav_layers">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Data" %}<i class="fa fa-angle-down fa-lg"></i></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Karten<i class="fa fa-angle-down fa-lg"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
-                <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
+                <li><a href="{% url "layer_browse" %}">Karten</a></li>
+                <li><a href="{% url "document_browse" %}">Dokumente</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
-                <li><a href="{% url "document_upload" %}">Upload Document</a></li>
+                <li><a href="{% url "layer_upload" %}">Importiere Karte</a></li>
+                <li><a href="{% url "document_upload" %}">Importiere Dokument</a></li>
                 <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
                 {% endif %}
               </ul>
