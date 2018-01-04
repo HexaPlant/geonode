@@ -57,7 +57,9 @@ DEBUG_STATIC = strtobool(os.getenv('DEBUG_STATIC', 'False'))
 # geonode to be listening for GeoServer auth requests.
 os.environ['DJANGO_LIVE_TEST_SERVER_ADDRESS'] = 'localhost:8000'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', 'django'])
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', 'django', 'geonode', 'geonode-devel', 'geonode.hexaplant.com', 'geonode-devel.hexaplant.com'])
+
+INTERNAL_IPS =['127.0.0.1']
 
 # AUTH_IP_WHITELIST property limits access to users/groups REST endpoints
 # to only whitelisted IP addresses.
@@ -93,7 +95,7 @@ MANAGERS = ADMINS = os.getenv('ADMINS', [])
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = os.getenv('TIME_ZONE', "America/Chicago")
+TIME_ZONE = os.getenv('TIME_ZONE', "Europe/Vienna")
 
 SITE_ID = int(os.getenv('SITE_ID', '1'))
 
@@ -102,7 +104,7 @@ USE_L10N = strtobool(os.getenv('USE_I18N', 'True'))
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', "en")
+LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', "de")
 
 
 _DEFAULT_LANGUAGES = (
@@ -138,7 +140,12 @@ _DEFAULT_LANGUAGES = (
     ('tl', 'Tagalog'),
 )
 
-LANGUAGES = os.getenv('LANGUAGES', _DEFAULT_LANGUAGES)
+#LANGUAGES = os.getenv('LANGUAGES', _DEFAULT_LANGUAGES)
+LANGUAGES = [
+    ('de', 'Deutsch'),
+    ('en', 'English')
+]
+
 
 EXTRA_LANG_INFO = {
     'am': {
@@ -230,9 +237,9 @@ LOGOUT_URL = os.getenv('LOGOUT_URL', '/account/logout/')
 ALLOWED_DOCUMENT_TYPES = [
     'doc', 'docx', 'gif', 'jpg', 'jpeg', 'ods', 'odt', 'odp', 'pdf', 'png',
     'ppt', 'pptx', 'rar', 'sld', 'tif', 'tiff', 'txt', 'xls', 'xlsx', 'xml',
-    'zip', 'gz', 'qml'
+    'zip', 'gz', 'qml', 'points', 'geo'
 ]
-MAX_DOCUMENT_SIZE = int(os.getenv('MAX_DOCUMENT_SIZE ', '2'))  # MB
+MAX_DOCUMENT_SIZE = int(os.getenv('MAX_DOCUMENT_SIZE ', '2000'))  # MB
 
 # DOCUMENT_TYPE_MAP and DOCUMENT_MIMETYPE_MAP update enumerations in
 # documents/enumerations.py and should only
@@ -370,7 +377,7 @@ LOGGING = {
             'class': 'django.utils.log.NullHandler',
         },
         'console': {
-            'level': 'ERROR',
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
         },
@@ -381,15 +388,15 @@ LOGGING = {
     },
     "loggers": {
         "django": {
-            "handlers": ["console"], "level": "ERROR", },
+            "handlers": ["console"], "level": "DEBUG", },
         "geonode": {
-            "handlers": ["console"], "level": "ERROR", },
+            "handlers": ["console"], "level": "DEBUG", },
         "gsconfig.catalog": {
-            "handlers": ["console"], "level": "ERROR", },
+            "handlers": ["console"], "level": "DEBUG", },
         "owslib": {
-            "handlers": ["console"], "level": "ERROR", },
+            "handlers": ["console"], "level": "DEBUG", },
         "pycsw": {
-            "handlers": ["console"], "level": "ERROR", },
+            "handlers": ["console"], "level": "DEBUG", },
         },
     }
 
@@ -491,7 +498,7 @@ DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION = strtobool(
 #
 # Settings for default search size
 #
-DEFAULT_SEARCH_SIZE = int(os.getenv('DEFAULT_SEARCH_SIZE', '10'))
+DEFAULT_SEARCH_SIZE = int(os.getenv('DEFAULT_SEARCH_SIZE', '100'))
 
 
 #
@@ -533,7 +540,7 @@ ACCOUNT_APPROVAL_REQUIRED = strtobool(
 
 # Email for users to contact admins.
 THEME_ACCOUNT_CONTACT_EMAIL = os.getenv(
-    'THEME_ACCOUNT_CONTACT_EMAIL', 'admin@example.com'
+    'THEME_ACCOUNT_CONTACT_EMAIL', 'atrawog@hexaplant.com'
 )
 
 #
@@ -846,25 +853,16 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # Available download formats
 DOWNLOAD_FORMATS_METADATA = [
-    'Atom', 'DIF', 'Dublin Core', 'ebRIM', 'FGDC', 'ISO',
+    'ISO',
 ]
 DOWNLOAD_FORMATS_VECTOR = [
-    'JPEG', 'PDF', 'PNG', 'Zipped Shapefile', 'GML 2.0', 'GML 3.1.1', 'CSV',
-    'Excel', 'GeoJSON', 'KML', 'View in Google Earth', 'Tiles',
+    'View in Google Earth'
 ]
 DOWNLOAD_FORMATS_RASTER = [
-    'JPEG',
-    'PDF',
-    'PNG',
-    'ArcGrid',
+    'Original untransformiertes TIFF',
     'GeoTIFF',
-    'Gtopo30',
-    'ImageMosaic',
-    'KML',
-    'View in Google Earth',
-    'Tiles',
-    'GML',
-    'GZIP'
+    'View in Google Earth'
+
 ]
 
 ACCOUNT_NOTIFY_ON_PASSWORD_CHANGE = False
@@ -968,12 +966,12 @@ SEARCH_FILTERS = {
     'TEXT_ENABLED': True,
     'TYPE_ENABLED': True,
     'CATEGORIES_ENABLED': True,
-    'OWNERS_ENABLED': True,
+    'OWNERS_ENABLED': False,
     'KEYWORDS_ENABLED': True,
     'H_KEYWORDS_ENABLED': True,
-    'T_KEYWORDS_ENABLED': True,
+    'T_KEYWORDS_ENABLED': False,
     'DATE_ENABLED': True,
-    'REGION_ENABLED': True,
+    'REGION_ENABLED': False,
     'EXTENT_ENABLED': True,
 }
 

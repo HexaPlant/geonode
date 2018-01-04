@@ -119,6 +119,13 @@ urlpatterns = patterns('',
                        url(r'', include(api.urls)),
                        )
 
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
+
 if "geonode.contrib.dynamic" in settings.INSTALLED_APPS:
     urlpatterns += patterns('',
                             (r'^dynamic/', include('geonode.contrib.dynamic.urls')),
