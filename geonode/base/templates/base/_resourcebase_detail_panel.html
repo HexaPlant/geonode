@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load markdown_deux_tags %}
+{% block content %}
+
+<dl class="dl-horizontal">
+    {% if resource.supplemental_information %}
+        <dt>{% trans "Supplemental Information" %}</dt>
+        <dd>{{ resource.supplemental_information |escape| markdown  }}</dd>
+    {% endif %}
+
+
+  </dl>
+
+{% endblock %}

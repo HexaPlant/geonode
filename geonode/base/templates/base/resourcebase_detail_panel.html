@@ -1,0 +1,10 @@
+{% extends "base/_resourcebase_detail_panel.html" %}
+{% load i18n %}
+
+<article itemscope itemtype="http://schema.org/Dataset" id="supplemental">
+  {% block article_content %}
+    {% block content %}
+      {{ block.super }}
+    {% endblock %}
+  {% endblock %}
+</article>
