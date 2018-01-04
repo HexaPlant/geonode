@@ -28,6 +28,7 @@ import os
 import glob
 import sys
 import tempfile
+import requests
 
 from osgeo import gdal
 
@@ -677,9 +678,29 @@ def upload(incoming, user=None, overwrite=False,
 
 def create_thumbnail(instance, thumbnail_remote_url, thumbnail_create_url=None,
                      check_bbox=True, ogc_client=None, overwrite=False):
+
+    logger.info ("Create thumbnail for %s %s %s"%(instance,thumbnail_remote_url, thumbnail_create_url))
     thumbnail_dir = os.path.join(settings.MEDIA_ROOT, 'thumbs')
     thumbnail_name = 'layer-%s-thumb.png' % instance.uuid
     thumbnail_path = os.path.join(thumbnail_dir, thumbnail_name)
+
+    try:
+        name = instance.name
+        print "Create thumbnail %s for %s"%(thumbnail_path,name)
+
+        thumbnail_create_url_new ="http://iiif.woldan.oeaw.ac.at?IIIF=%s.tif/full/,512/0/default.jpg"%name
+
+        print "Try to fetch thumbnail from % s"%thumbnail_create_url_new
+        request = requests.get(thumbnail_create_url_new)
+        if request.status_code == 200:
+            thumbnail_create_url = thumbnail_remote_url = thumbnail_create_url_new
+
+        print "Fetching thumbnail from % s"%thumbnail_remote_url
+
+    except AttributeError:
+        pass
+
+
 
     if overwrite is True or storage.exists(thumbnail_path) is False:
         if not ogc_client:

@@ -565,6 +565,7 @@ class ResourceBase(PolymorphicModel, PermissionLevelMixin, ItemBase):
         blank=True,
         null=True)
     srid = models.CharField(max_length=255, default='EPSG:4326')
+    denominator = models.IntegerField(_('denominator'), default=0)
 
     # CSW specific fields
     csw_typename = models.CharField(
