@@ -315,7 +315,7 @@ INSTALLED_APPS = (
     'leaflet',
     'django_extensions',
     #'geonode-client',
-    # 'haystack',
+    'haystack',
     'autocomplete_light',
     'mptt',
     # 'modeltranslation',
@@ -342,6 +342,8 @@ INSTALLED_APPS = (
     'polymorphic',
     'guardian',
     'oauth2_provider',
+    'markdown_deux',
+    'debug_toolbar',
 
 ) + GEONODE_APPS
 
@@ -446,6 +448,7 @@ MIDDLEWARE_CLASSES = (
     # SessionAuthenticationMiddleware is NOT required for using django-oauth-toolkit.
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 
@@ -811,12 +814,12 @@ PROXY_URL = '/proxy/?url=' if DEBUG else None
 # - pip install pyelasticsearch
 # Set HAYSTACK_SEARCH to True
 # Run "python manage.py rebuild_index"
-HAYSTACK_SEARCH = False
+#HAYSTACK_SEARCH = True
 # Avoid permissions prefiltering
-SKIP_PERMS_FILTER = False
+#SKIP_PERMS_FILTER = False
 # Update facet counts from Haystack
-HAYSTACK_FACET_COUNTS = False
-# HAYSTACK_CONNECTIONS = {
+#HAYSTACK_FACET_COUNTS = False
+#HAYSTACK_CONNECTIONS = {
 #    'default': {
 #        'ENGINE': 'haystack.backends.elasticsearch_backend.'
 #        'ElasticsearchSearchEngine',
@@ -824,8 +827,22 @@ HAYSTACK_FACET_COUNTS = False
 #        'INDEX_NAME': 'geonode',
 #        },
 #    }
-# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
-# HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
+#HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+#HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
+
+HAYSTACK_SEARCH = True
+# Avoid permissions prefiltering
+SKIP_PERMS_FILTER = True
+# Update facet counts from Haystack
+HAYSTACK_FACET_COUNTS = False
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'geonode',
+        },
+    }
+
 
 # Available download formats
 DOWNLOAD_FORMATS_METADATA = [
