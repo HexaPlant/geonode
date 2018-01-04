@@ -834,7 +834,7 @@ HAYSTACK_SEARCH = True
 # Avoid permissions prefiltering
 SKIP_PERMS_FILTER = True
 # Update facet counts from Haystack
-HAYSTACK_FACET_COUNTS = False
+HAYSTACK_FACET_COUNTS = True
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
@@ -842,7 +842,7 @@ HAYSTACK_CONNECTIONS = {
         'INDEX_NAME': 'geonode',
         },
     }
-
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # Available download formats
 DOWNLOAD_FORMATS_METADATA = [
