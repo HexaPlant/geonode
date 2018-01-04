@@ -19,6 +19,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 # Andres Alfonso Lemon Gomez <lemon.andres@gmail.com>, 2014
 # barbara angerer <barbara.angerer@student.tugraz.at>, 2013
 # barbara angerer <barbara.angerer@student.tugraz.at>, 2013
@@ -553,7 +554,7 @@ msgstr "Owner, Point of Contact, Metadaten Urheber"
 #: geonode/layers/templates/layers/layer_detail.html:414
 #: geonode/templates/search/_search_content.html:16
 msgid "Create a Map"
-msgstr "Karte erstellen"
+msgstr "Overlay erstellen"
 
 #: geonode/base/templates/base/resourcebase_info_panel.html:6
 #: geonode/catalogue/templates/geonode_metadata_full.html:54
@@ -729,7 +730,7 @@ msgid ""
 "GeoNode is an open source platform for sharing geospatial data and maps."
 msgstr ""
 "GeoNode ist eine Open-Source-Plattform für den Austausch von Geodaten und "
-"Karten."
+"Overlays."
 
 #: geonode/contrib/geosites/site_template/templates/site_index.html:11
 #: geonode/contrib/geosites/templates/master_index.html:12
@@ -768,8 +769,8 @@ msgstr "Keine"
 #: geonode/templates/notification/request_download_resourcebase/full.txt:7
 msgid "Layer"
 msgid_plural "Layers"
-msgstr[0] "Ebene"
-msgstr[1] "Ebenen"
+msgstr[0] "Karte"
+msgstr[1] "Karten"
 
 #: geonode/contrib/geosites/templates/master_index.html:26
 #: geonode/templates/index.html:31
@@ -784,20 +785,20 @@ msgstr ""
 #: geonode/contrib/geosites/templates/master_index.html:28
 #: geonode/templates/index.html:33
 msgid "Add layers"
-msgstr "Ebenen hinzufügen"
+msgstr "Karten hinzufügen"
 
 #: geonode/contrib/geosites/templates/master_index.html:30
 #: geonode/templates/index.html:35
 msgid "Explore layers"
-msgstr "Ebenen erkunden"
+msgstr "Karten erkunden"
 
 #: geonode/contrib/geosites/templates/master_index.html:35
 #: geonode/maps/templates/maps/map_detail.html:137
 #: geonode/templates/index.html:40
 msgid "Map"
 msgid_plural "Maps"
-msgstr[0] "Karte"
-msgstr[1] "Karten"
+msgstr[0] "Overlay"
+msgstr[1] "Overlays"
 
 #: geonode/contrib/geosites/templates/master_index.html:36
 #: geonode/templates/index.html:41
@@ -806,18 +807,18 @@ msgid ""
 "which can be shared publicly or restricted to specific users only."
 msgstr ""
 "Die Daten sind zum Schmökern, Verschneiden und Gestalten verfügbar und "
-"können zu Karten verarbeitet werden, die öffentlich geteilt oder nur für "
+"können zu Overlays verarbeitet werden, die öffentlich geteilt oder nur für "
 "bestimmte Nutzer freigegeben werden können."
 
 #: geonode/contrib/geosites/templates/master_index.html:38
 #: geonode/templates/index.html:43
 msgid "Create maps"
-msgstr "Karten zu erstellen"
+msgstr "Overlay zu erstellen"
 
 #: geonode/contrib/geosites/templates/master_index.html:40
 #: geonode/templates/index.html:45
 msgid "Explore maps"
-msgstr "Karten erkunden"
+msgstr "Overlays erkunden"
 
 #: geonode/contrib/geosites/templates/master_index.html:45
 #: geonode/templates/index.html:50
@@ -900,7 +901,7 @@ msgstr "Ein Dokument wurde kommentiert am"
 
 #: geonode/documents/management/__init__.py:50
 msgid "Document for Map"
-msgstr "Dokument für eine Karte"
+msgstr "Dokument für ein Overlay"
 
 #: geonode/documents/management/__init__.py:51
 msgid "A rating was given to a document"
@@ -1020,7 +1021,7 @@ msgstr "Dieses Dokument ist verwandt mit"
 
 #: geonode/documents/templates/documents/document_detail.html:197
 msgid "This document is not related to any maps or layers"
-msgstr "Diese Dokument mit keiner Karte und keinem Layer verwandt"
+msgstr "Diese Dokument mit keinem Overlay und keinem Layer verwandt"
 
 #: geonode/documents/templates/documents/document_detail.html:204
 #: geonode/documents/templates/documents/document_upload.html:30
@@ -1392,14 +1393,14 @@ msgstr "Alles"
 #: geonode/social/templates/social/activity_list.html:21
 #: geonode/templates/500.html:55 geonode/templates/base.html:56
 msgid "Layers"
-msgstr "Ebenen"
+msgstr "Karten"
 
 #: geonode/groups/templates/groups/activity.html:27
 #: geonode/people/templates/people/_profile_filters.html:6
 #: geonode/social/templates/social/activity_list.html:22
 #: geonode/templates/500.html:58 geonode/templates/base.html:59
 msgid "Maps"
-msgstr "Karten"
+msgstr "Overlays"
 
 #: geonode/groups/templates/groups/activity.html:28
 #: geonode/social/templates/social/activity_list.html:23
@@ -1551,35 +1552,35 @@ msgstr ""
 
 #: geonode/groups/templates/groups/group_remove_maps_data.html:6
 msgid "Remove Maps/Data from Group"
-msgstr "Entfernen Sie Karten / Daten aus Gruppe"
+msgstr "Entfernen Sie Overlays / Daten aus Gruppe"
 
 #: geonode/groups/templates/groups/group_remove_maps_data.html:15
 msgid "Remove selected maps/data"
-msgstr "Ausgewählten Karten entfernen / Daten"
+msgstr "Ausgewählten Overlays entfernen / Daten"
 
 #: geonode/layers/management/__init__.py:34
 msgid "Layer Created"
-msgstr "Ebene erzeugt"
+msgstr "Karte erzeugt"
 
 #: geonode/layers/management/__init__.py:35
 msgid "A Layer was created"
-msgstr "Eine Ebene wurde erstellt"
+msgstr "Eine Karte wurde erstellt"
 
 #: geonode/layers/management/__init__.py:38
 msgid "Layer Updated"
-msgstr "Ebene aktualisiert"
+msgstr "Karte aktualisiert"
 
 #: geonode/layers/management/__init__.py:39
 msgid "A Layer was updated"
-msgstr "Eine Ebene wurde aktualisiert"
+msgstr "Eine Karte wurde aktualisiert"
 
 #: geonode/layers/management/__init__.py:42
 msgid "Layer Deleted"
-msgstr "Ebene gelöscht"
+msgstr "Karte gelöscht"
 
 #: geonode/layers/management/__init__.py:43
 msgid "A Layer was deleted"
-msgstr "Eine Ebene wurde gelöscht"
+msgstr "Eine Karte wurde gelöscht"
 
 #: geonode/layers/models.py:51
 msgid "YYYYMMDD"
@@ -1748,7 +1749,7 @@ msgstr "Ändere Kontaktpunkte"
 
 #: geonode/layers/templates/layers/layer_change_poc.html:10
 msgid "Assign a new point of contact to the layers below:"
-msgstr "Den folgenden Ebenen neue Kontaktdaten zuweisen:"
+msgstr "Den folgenden Karten neue Kontaktdaten zuweisen:"
 
 #: geonode/layers/templates/layers/layer_change_poc.html:17
 #: geonode/people/templates/people/forgot_username_form.html:15
@@ -1835,12 +1836,12 @@ msgstr "diese Layer bewerten"
 #: geonode/layers/templates/layers/layer_detail.html:245
 #: geonode/layers/templates/layers/layer_detail.html:258
 msgid "Download Layer"
-msgstr "Ebene herunterladen"
+msgstr "Karte herunterladen"
 
 #: geonode/layers/templates/layers/layer_detail.html:288
 #: geonode/layers/templates/layers/layer_detail.html:295
 msgid "Edit Layer"
-msgstr "Ebene bearbeiten"
+msgstr "Karte bearbeiten"
 
 #: geonode/layers/templates/layers/layer_detail.html:310
 #: geonode/layers/templates/layers/layer_detail.html:431
@@ -1860,7 +1861,7 @@ msgstr "Thumbnail"
 #: geonode/layers/templates/layers/layer_detail.html:322
 #: geonode/maps/templates/maps/map_detail.html:131
 msgid "Set"
-msgstr "Ebenen erkunden"
+msgstr "Karten erkunden"
 
 #: geonode/layers/templates/layers/layer_detail.html:333
 msgid "Edit data"
@@ -1873,24 +1874,24 @@ msgstr "Legende"
 
 #: geonode/layers/templates/layers/layer_detail.html:399
 msgid "Maps using this layer"
-msgstr "Karten mit dieser Ebene"
+msgstr "Overlays mit dieser Karte"
 
 #: geonode/layers/templates/layers/layer_detail.html:401
 msgid "List of maps using this layer:"
-msgstr "Liste von Karten, die diese Ebene verwenden:"
+msgstr "Liste von Overlays, die diese Karte verwenden:"
 
 #: geonode/layers/templates/layers/layer_detail.html:407
 msgid "This layer is not currently used in any maps."
-msgstr "Diese Ebene wird in keiner Karte verwendet."
+msgstr "Diese Karte wird in keiner Overlays verwendet."
 
 #: geonode/layers/templates/layers/layer_detail.html:412
 msgid "Create a map using this layer"
-msgstr "Eine Karte mit dieser Ebene erstellen"
+msgstr "Ein Overlay mit dieser Karte erstellen"
 
 #: geonode/layers/templates/layers/layer_detail.html:413
 msgid "Click the button below to generate a new map based on this layer."
 msgstr ""
-"Schaltfläche unterhalb klicken, um eine neue Karte basierend auf dem Layer "
+"Schaltfläche unterhalb klicken, um eine neue Overlays basierend auf der Karte "
 "zu generieren."
 
 #: geonode/layers/templates/layers/layer_detail.html:419
@@ -1906,12 +1907,12 @@ msgid ""
 "The following styles are associated with this layer. Choose a style to view "
 "it in the preview map."
 msgstr ""
-"Die folgenden Stile sind mit dieser Ebene verknüpft. Wählen Sie einen Stil "
-"aus, um ihn in der Vorschaukarte anzuzeigen."
+"Die folgenden Stile sind mit dieser Karte verknüpft. Wählen Sie einen Stil "
+"aus, um ihn in der VorschauOverlays anzuzeigen."
 
 #: geonode/layers/templates/layers/layer_detail.html:445
 msgid "No styles associated with this layer"
-msgstr "Keine Stile mit der Ebene verknüpft"
+msgstr "Keine Stile mit der Karte verknüpft"
 
 #: geonode/layers/templates/layers/layer_detail.html:455
 msgid "Click the button below to change the permissions of this layer."
@@ -1921,7 +1922,7 @@ msgstr ""
 
 #: geonode/layers/templates/layers/layer_detail.html:456
 msgid "Change Layer Permissions"
-msgstr "Ebenen-Berechtigungen ändern"
+msgstr "Karten-Berechtigungen ändern"
 
 #: geonode/layers/templates/layers/layer_detail.html:463
 msgid "External service layer"
@@ -1939,7 +1940,7 @@ msgstr "Quelle"
 #: geonode/layers/templates/upload/layer_upload.html:17
 #: geonode/layers/templates/upload/layer_upload_base.html:11
 msgid "Explore Layers"
-msgstr "Ebenen erforschen"
+msgstr "Karten erforschen"
 
 #: geonode/layers/templates/layers/layer_granule_remove.html:9
 msgid "Remove Mosaic Granules"
@@ -1957,19 +1958,19 @@ msgstr ""
 #: geonode/layers/templates/layers/layer_granule_remove.html:30
 #: geonode/layers/templates/layers/layer_remove.html:30
 msgid "This action affects the following maps:"
-msgstr "Diese Handlung hat Auswirkungen auf die folgenden Karten:"
+msgstr "Diese Handlung hat Auswirkungen auf die folgenden Overlays:"
 
 #: geonode/layers/templates/layers/layer_granule_remove.html:34
 #: geonode/layers/templates/layers/layer_remove.html:34
 msgid "No maps are using this layer"
-msgstr "Diese Ebene wird in keiner Karte verwendet"
+msgstr "Diese Karte wird in keiner Overlays verwendet"
 
 #: geonode/layers/templates/layers/layer_list.html:12
 #: geonode/layers/templates/upload/layer_upload.html:18
 #: geonode/layers/templates/upload/layer_upload_base.html:12
 #: geonode/templates/500.html:216 geonode/templates/base.html:210
 msgid "Upload Layers"
-msgstr "Ebenen hochladen"
+msgstr "Karten hochladen"
 
 #: geonode/layers/templates/layers/layer_metadata.html:17
 #, python-format
@@ -2018,7 +2019,7 @@ msgstr "Anzeigereihenfolge"
 
 #: geonode/layers/templates/layers/layer_remove.html:9
 msgid "Remove Layers"
-msgstr "Ebenen entfernen"
+msgstr "Karten entfernen"
 
 #: geonode/layers/templates/layers/layer_remove.html:14
 #, python-format
@@ -2039,7 +2040,7 @@ msgstr "Layer ersetzen"
 
 #: geonode/layers/templates/layers/layer_replace.html:19
 msgid "Replace Layer: "
-msgstr "Ebene ersetzen:"
+msgstr "Karte ersetzen:"
 
 #: geonode/layers/templates/layers/layer_replace.html:23
 #: geonode/layers/templates/upload/layer_upload.html:40
@@ -2257,7 +2258,7 @@ msgstr "Uploadformular"
 
 #: geonode/layers/templates/upload/layer_upload_time.html:7
 msgid "Upload Layer Step 2"
-msgstr "Ebene hochladen Schritt 2"
+msgstr "Karte hochladen Schritt 2"
 
 #: geonode/layers/templates/upload/layer_upload_time.html:15
 msgid "Editing details for "
@@ -2468,83 +2469,83 @@ msgstr ""
 
 #: geonode/layers/views.py:84
 msgid "You are not permitted to delete this layer"
-msgstr "Sie sind nicht berechtigt, diese Ebene zu löschen"
+msgstr "Sie sind nicht berechtigt, diese Karte zu löschen"
 
 #: geonode/layers/views.py:85
 msgid "You do not have permissions for this layer."
-msgstr "Sie haben keine Berechtigungen für diese Ebene"
+msgstr "Sie haben keine Berechtigungen für diese Karte"
 
 #: geonode/layers/views.py:86
 msgid "You are not permitted to modify this layer"
-msgstr "Sie sind nicht berechtigt, diese Ebene zu ändern"
+msgstr "Sie sind nicht berechtigt, diese Karte zu ändern"
 
 #: geonode/layers/views.py:88
 msgid "You are not permitted to modify this layer's metadata"
-msgstr "Sie sind nicht berechtigt, die Metadaten dieser Ebene zu ändern"
+msgstr "Sie sind nicht berechtigt, die Metadaten dieser Karte zu ändern"
 
 #: geonode/layers/views.py:89
 msgid "You are not permitted to view this layer"
-msgstr "Sie sind nicht berechtigt, diese Ebene anzusehen"
+msgstr "Sie sind nicht berechtigt, diese Karte anzusehen"
 
 #: geonode/layers/views.py:533
 msgid "You are attempting to replace a vector layer with a raster."
-msgstr "Sie haben versucht, eine Vektorebene mit einem Raster zu ersetzen."
+msgstr "Sie haben versucht, eine VektorKarte mit einem Raster zu ersetzen."
 
 #: geonode/layers/views.py:536
 msgid "You are attempting to replace a raster layer with a vector."
-msgstr "Sie haben versucht, eine Rasterebene mit einem Vektor zu ersetzen."
+msgstr "Sie haben versucht, eine RasterKarte mit einem Vektor zu ersetzen."
 
 #: geonode/layers/views.py:593 geonode/layers/views.py:627
 msgid "Unable to delete layer"
-msgstr "Ebene kann nicht gelöscht werden"
+msgstr "Karte kann nicht gelöscht werden"
 
 #: geonode/layers/views.py:596 geonode/layers/views.py:630
 msgid ""
 "This layer is a member of a layer group, you must remove the layer from the "
 "group before deleting."
 msgstr ""
-"Diese Ebene gehört zu einer Ebenengruppe, um sie zu löschen müssen Sie sie "
+"Diese Karte gehört zu einer Kartengruppe, um sie zu löschen müssen Sie sie "
 "zuerst aus der Gruppe entfernen."
 
 #: geonode/maps/management/__init__.py:34
 msgid "Map Created"
-msgstr "Karte erstellt"
+msgstr "Overlays erstellt"
 
 #: geonode/maps/management/__init__.py:35
 msgid "A Map was created"
-msgstr "Eine Karte wurde erstellt"
+msgstr "Ein Overlay wurde erstellt"
 
 #: geonode/maps/management/__init__.py:38
 msgid "Map Updated"
-msgstr "Karte aktualisiert"
+msgstr "Overlay aktualisiert"
 
 #: geonode/maps/management/__init__.py:39
 msgid "A Map was updated"
-msgstr "Eine Karte wurde aktualisiert"
+msgstr "Ein Overlay wurde aktualisiert"
 
 #: geonode/maps/management/__init__.py:42
 msgid "Map Deleted"
-msgstr "Karte gelöscht"
+msgstr "Overlay gelöscht"
 
 #: geonode/maps/management/__init__.py:43
 msgid "A Map was deleted"
-msgstr "Karte war gelöscht"
+msgstr "Overlay war gelöscht"
 
 #: geonode/maps/management/__init__.py:46
 msgid "Comment on Map"
-msgstr "Kommentar zur Karte"
+msgstr "Kommentar zur Overlay"
 
 #: geonode/maps/management/__init__.py:47
 msgid "A map was commented on"
-msgstr "Eine Karte wurde kommentiert"
+msgstr "Eine Overlay wurde kommentiert"
 
 #: geonode/maps/management/__init__.py:50
 msgid "Rating for Map"
-msgstr "Bewerten der Karte"
+msgstr "Bewerten des Overlay"
 
 #: geonode/maps/management/__init__.py:51
 msgid "A rating was given to a map"
-msgstr "Eine Bewertung wurde für eine Karte abgegeben"
+msgstr "Eine Bewertung wurde für ein Overlay abgegeben"
 
 #: geonode/maps/models.py:61
 msgid "zoom"
@@ -2568,7 +2569,7 @@ msgstr "URL der Website"
 
 #: geonode/maps/models.py:85
 msgid "Featured Map URL"
-msgstr "Besondere Karte URL"
+msgstr "Besondere Overlays URL"
 
 #: geonode/maps/models.py:385
 msgid "stack order"
@@ -2612,7 +2613,7 @@ msgstr "ows URL"
 
 #: geonode/maps/models.py:432
 msgid "layer params"
-msgstr "Ebenenparameter"
+msgstr "Kartenparameter"
 
 #: geonode/maps/models.py:439
 msgid "source params"
@@ -2629,13 +2630,13 @@ msgstr "JSON-Konfiguration"
 #: geonode/maps/templates/maps/map_list.html:11
 #: geonode/maps/templates/maps/map_metadata.html:11
 msgid "Explore Maps"
-msgstr "Karten erforschen"
+msgstr "Overlays erforschen"
 
 #: geonode/maps/templates/leaflet_maps/map_list.html:10
 #: geonode/maps/templates/maps/map_detail.html:201
 #: geonode/maps/templates/maps/map_list.html:10
 msgid "Create a New Map"
-msgstr "Neue Karte anlegen"
+msgstr "Neue Overlays anlegen"
 
 #: geonode/maps/templates/leaflet_maps/map_view.html:7
 #: geonode/maps/templates/maps/map_view.html:5
@@ -2644,12 +2645,12 @@ msgstr "GeoExplorer"
 
 #: geonode/maps/templates/maps/map_detail.html:56
 msgid "Rate this Map"
-msgstr "diese Karte bewerten"
+msgstr "diese Overlays bewerten"
 
 #: geonode/maps/templates/maps/map_detail.html:78
 #: geonode/maps/templates/maps/map_detail.html:93
 msgid "Download Map"
-msgstr "Karte herunterladen"
+msgstr "Overlays herunterladen"
 
 #: geonode/maps/templates/maps/map_detail.html:97
 msgid "Download Data Layers"
@@ -2662,51 +2663,51 @@ msgstr "Download Web Map Context"
 #: geonode/maps/templates/maps/map_detail.html:109
 #: geonode/maps/templates/maps/map_detail.html:116
 msgid "Edit Map"
-msgstr "Karte bearbeiten"
+msgstr "Overlays bearbeiten"
 
 #: geonode/maps/templates/maps/map_detail.html:152
 msgid "View Map"
-msgstr "Karte ansehen"
+msgstr "Overlays ansehen"
 
 #: geonode/maps/templates/maps/map_detail.html:162
 msgid "Map Layers"
-msgstr "Kartenebenen"
+msgstr "OverlaysKarten"
 
 #: geonode/maps/templates/maps/map_detail.html:163
 msgid "This map uses the following layers:"
-msgstr "Diese Karte verwendet die folgenden Ebenen:"
+msgstr "Diese Overlays verwendet die folgenden Karten:"
 
 #: geonode/maps/templates/maps/map_detail.html:179
 msgid "Documents related to this map"
-msgstr "Dokumente die zu dieser Karte gehören"
+msgstr "Dokumente die zu dieser Overlays gehören"
 
 #: geonode/maps/templates/maps/map_detail.html:180
 msgid "List of documents related to this map:"
-msgstr "Liste der Dokumente die zu dieser Karte gehören"
+msgstr "Liste der Dokumente die zu dieser Overlays gehören"
 
 #: geonode/maps/templates/maps/map_detail.html:192
 msgid "Specify which users can view or modify this map"
-msgstr "Lege fest, welche Nutzer die Karte sehen und/oder anpassen können"
+msgstr "Lege fest, welche Nutzer die Overlays sehen und/oder anpassen können"
 
 #: geonode/maps/templates/maps/map_detail.html:193
 msgid "Change Permissions of this Map"
-msgstr "Berechtigungen der Karte ändern"
+msgstr "Berechtigungen der Overlays ändern"
 
 #: geonode/maps/templates/maps/map_detail.html:199
 msgid "Copy this map"
-msgstr "Karte kopieren"
+msgstr "Overlays kopieren"
 
 #: geonode/maps/templates/maps/map_detail.html:200
 msgid "Duplicate this map and modify it for your own purposes"
-msgstr "Dupliziere die Karte, um sie auf deine belange anzupassen"
+msgstr "Dupliziere die Overlays, um sie auf deine belange anzupassen"
 
 #: geonode/maps/templates/maps/map_detail.html:206
 msgid "Map WMS"
-msgstr "Karte WMS"
+msgstr "Overlays WMS"
 
 #: geonode/maps/templates/maps/map_detail.html:208
 msgid "WMS layer group for local map layers"
-msgstr "WMS-Layer-Gruppe für lokale Kartenlayer"
+msgstr "WMS-Layer-Gruppe für lokale Overlayslayer"
 
 #: geonode/maps/templates/maps/map_detail.html:209
 #: geonode/social/templatetags/social_tags.py:68 geonode/social/tests.py:128
@@ -2723,7 +2724,7 @@ msgstr "Veröffentlichen Ortsplan Schichten als WMS-Layer-Gruppe"
 
 #: geonode/maps/templates/maps/map_detail.html:213
 msgid "Publish Map WMS"
-msgstr "Karte als WMS publizieren"
+msgstr "Overlays als WMS publizieren"
 
 #: geonode/maps/templates/maps/map_download.html:6
 msgid "Download"
@@ -2737,7 +2738,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Hier können Sie alle Schichten dieser Karte, die auf diesem GeoNode gehostet "
+"Hier können Sie alle Schichten dieser Overlays, die auf diesem GeoNode gehostet "
 "werden herunterladen."
 
 #: geonode/maps/templates/maps/map_download.html:22
@@ -2749,7 +2750,7 @@ msgid ""
 msgstr ""
 "\n"
 "<div class=\"alert alert-warning\"> Konnte nicht gefunden herunterladbare "
-"Schichten für diese Karte. Sie können gehen Sie zurück"
+"Schichten für diese Overlays. Sie können gehen Sie zurück"
 
 #: geonode/maps/templates/maps/map_download.html:29
 msgid ""
@@ -2760,7 +2761,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Zusätzlich enthält die Karte folgende Ebenen, die wegen "
+"Zusätzlich enthält die Overlays folgende Karten, die wegen "
 "Zugriffsbeschränkungen nicht heruntergeladen werden:"
 
 #: geonode/maps/templates/maps/map_download.html:41
@@ -2771,7 +2772,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Schließlich enthält die Karte noch diese Ebenen, die nicht heruntergeladen "
+"Schließlich enthält die Overlays noch diese Karten, die nicht heruntergeladen "
 "werden, weil sie nicht direkt von diesem GeoNode bereit gestellt werden:"
 
 #: geonode/maps/templates/maps/map_download.html:54
@@ -2784,7 +2785,7 @@ msgstr "Wiederholen"
 
 #: geonode/maps/templates/maps/map_download.html:65
 msgid "Start downloading this map"
-msgstr "Diese Karte herunterladen"
+msgstr "Diese Overlays herunterladen"
 
 #: geonode/maps/templates/maps/map_download.html:95
 msgid "Download Complete"
@@ -2813,14 +2814,14 @@ msgid ""
 "Core metadata elements.\n"
 "        Some of your original metadata may have been lost."
 msgstr ""
-"Hinweis: orginal Metadaten dieser Karte wurde durch den Import einer XML-"
+"Hinweis: orginal Metadaten dieser Overlays wurde durch den Import einer XML-"
 "Metadatendatei besiedelt. Import von Metadaten GeoNode die unterstützt einen "
 "Teil der ISO, FGDC und Dublin Core Metadaten-Elemente. Einige Ihrer "
 "ursprünglichen Metadaten möglicherweise verloren gegangen."
 
 #: geonode/maps/templates/maps/map_remove.html:10
 msgid "Remove Map"
-msgstr "Karte entfernen"
+msgstr "Overlays entfernen"
 
 #: geonode/maps/templates/maps/map_remove.html:15
 #, python-format
@@ -2833,28 +2834,28 @@ msgstr ""
 
 #: geonode/maps/views.py:80
 msgid "You are not permitted to delete this map."
-msgstr "Sie sind nicht berechtigt, diese Karte zu löschen."
+msgstr "Sie sind nicht berechtigt, diese Overlays zu löschen."
 
 #: geonode/maps/views.py:81
 msgid "You do not have permissions for this map."
-msgstr "Sie haben keine Berechtigungen für diese Karte."
+msgstr "Sie haben keine Berechtigungen für diese Overlays."
 
 #: geonode/maps/views.py:82
 msgid "You must be logged in to save this map"
-msgstr "Sie müssen angemeldet sein, um diese Karte zu speichern"
+msgstr "Sie müssen angemeldet sein, um diese Overlays zu speichern"
 
 #: geonode/maps/views.py:83
 msgid "You are not permitted to save or edit this map."
 msgstr ""
-"Sie sind nicht berechtigt, zu speichern oder diese Karte zu bearbeiten."
+"Sie sind nicht berechtigt, zu speichern oder diese Overlays zu bearbeiten."
 
 #: geonode/maps/views.py:85
 msgid "You are not allowed to modify this map's metadata."
-msgstr "Sie sind nicht berechtigt, die Metadaten dieser Karte zu ändern."
+msgstr "Sie sind nicht berechtigt, die Metadaten dieser Overlays zu ändern."
 
 #: geonode/maps/views.py:86
 msgid "You are not allowed to view this map."
-msgstr "Sie sind nicht berechtigt, diese Karte anzusehen."
+msgstr "Sie sind nicht berechtigt, diese Overlays anzusehen."
 
 #: geonode/maps/views.py:87
 msgid "An unknown error has occured."
@@ -3163,7 +3164,7 @@ msgstr "neuen Layer hochladen."
 
 #: geonode/people/templates/people/profile_detail.html:129
 msgid "Create a new map"
-msgstr "Neue Karte erstellen"
+msgstr "Neue Overlays erstellen"
 
 #: geonode/people/templates/people/profile_detail.html:131
 msgid "My Activities"
@@ -3320,7 +3321,7 @@ msgstr "Schicht Beschreibung"
 
 #: geonode/services/models.py:115
 msgid "Layer Styles"
-msgstr "Ebenenstile"
+msgstr "Kartenstile"
 
 #: geonode/services/templates/services/layers_register.html:26
 msgid "All/None"
@@ -3335,7 +3336,7 @@ msgstr "Name"
 
 #: geonode/services/templates/services/layers_register.html:42
 msgid "Add Layers"
-msgstr "Ebenen hinzufügen"
+msgstr "Karten hinzufügen"
 
 #: geonode/services/templates/services/service_detail.html:43
 msgid "Name:"
@@ -3441,7 +3442,7 @@ msgstr ""
 "Aktuelle Partner sind: Harvard, MIT, MassGIS, Princeton, Columbia, Stanford, "
 "UC Berkeley, UCLA, Yale, und UConn. Auf Open-Source-Technologie, bietet die "
 "Open Geoportal Organisationen die Möglichkeit, Tausende von Geodaten "
-"Schichten, Karten, Metadaten und Entwicklungsressourcen über eine einzige "
+"Schichten, Overlays, Metadaten und Entwicklungsressourcen über eine einzige "
 "gemeinsame Schnittstelle zu teilen.\n"
 
 #: geonode/services/views.py:286
@@ -3723,7 +3724,7 @@ msgstr "Wer kann Daten für diese Schicht zu bearbeiten?"
 
 #: geonode/templates/_permissions.html:125
 msgid "Who can edit styles for this layer?"
-msgstr "Wer kann die Stile dieser Ebene bearbeiten?"
+msgstr "Wer kann die Stile dieser Karte bearbeiten?"
 
 #: geonode/templates/_permissions.html:152
 msgid ""
@@ -4281,7 +4282,7 @@ msgid ""
 msgstr ""
 "\n"
 "<p>GeoNode ermöglicht den Zugriff auf Datensätze sowie eine "
-"Kartenerstellungs-Anwendung und lässt Nutzer vorhandene Karten durchsuchen "
+"Overlayserstellungs-Anwendung und lässt Nutzer vorhandene Overlays durchsuchen "
 "sowie eigene Erstellen.</p>\n"
 "\n"
 "<h4 id=\"browsing-data\">Layer durchsuchen</h4>\n"
@@ -4297,44 +4298,44 @@ msgstr ""
 "Quellcode von GeoNode, sowie Informationen über denen von GeoNode genutzten "
 "Open-Source Projekten.</p>\n"
 "\n"
-"<h4 id=\"browsing-maps\">Karten durchsuchen</h4>\n"
+"<h4 id=\"browsing-maps\">Overlays durchsuchen</h4>\n"
 "\n"
-"<p>GeoNode ermöglicht den NutzerInnen Karten zu erstellen und mit anderen zu "
+"<p>GeoNode ermöglicht den NutzerInnen Overlays zu erstellen und mit anderen zu "
 "Teilen.</p>\n"
-"<p>Der <a href=\"/maps\">Karten</a> Reiter ermöglicht die mit GeoNode "
-"erstellen Kartenwerke zu erkunden. Von dort aus können die Funktionen "
-"<strong>Karte suchen</strong> oder <strong>neue Karte erstellen</strong> "
+"<p>Der <a href=\"/maps\">Overlays</a> Reiter ermöglicht die mit GeoNode "
+"erstellen Overlayswerke zu erkunden. Von dort aus können die Funktionen "
+"<strong>Overlays suchen</strong> oder <strong>neue Overlays erstellen</strong> "
 "gewählt werden, welche den <a href=\"/maps/new\">Map Composer</a> öffnen.</"
 "p>\n"
 "\n"
 "<h5>Google Earth Modus</h5>\n"
 "\n"
-"<p>Jede der in der interaktiven Kartenansicht gezeigten Karten kann über das "
+"<p>Jede der in der interaktiven Overlaysansicht gezeigten Overlays kann über das "
 "Google Earth Plugin in 3D betrachtet werden. Um in die 3D-Ansicht zu "
-"wechseln muss das Google Earth Logo in der Kartenansicht angewählt werden, "
-"der rechte Knopf in der Werkzeugleiste oberhalb der Kartenansicht. Wenn bei "
+"wechseln muss das Google Earth Logo in der Overlaysansicht angewählt werden, "
+"der rechte Knopf in der Werkzeugleiste oberhalb der Overlaysansicht. Wenn bei "
 "Ihnen im Browser das Google Earth Plugin fehlt, werden Sie dazu aufgefordert "
 "es zu installieren.</p>\n"
 "\n"
-"<h4 id=\"creating-a-map\">Eine Karte erstellen</h4>\n"
+"<h4 id=\"creating-a-map\">Eine Overlays erstellen</h4>\n"
 "\n"
-"<p>Um eine neue Karte zu erstellen wählen Sie den <a href=\"/maps\">Karten</"
-"a> Reiter und klicken dort <a href=\"/maps/new\">neue Karte anlegen</a>.</"
+"<p>Um eine neue Overlays zu erstellen wählen Sie den <a href=\"/maps\">Overlays</"
+"a> Reiter und klicken dort <a href=\"/maps/new\">neue Overlays anlegen</a>.</"
 "p>\n"
 "\n"
 "<p>Dies öffnet den <a href=\"/maps/new\">Map Composer</a> - die interaktive "
-"Kartenansicht - mit einem geladenen Hintergrundlayer.</p>\n"
+"Overlaysansicht - mit einem geladenen Hintergrundlayer.</p>\n"
 "\n"
 "<p>Um weitere Datensätze hinzuzuladen kann der grüne Plus Knopf genutzt "
 "werden, welcher sich auf der linken Seite des MapComposers, über der "
 "Layerliste, befindet. Dies öffnet einen Dialog mit allen in GeoNode "
 "verfügbaren Layern zur Auswahl.</p>\n"
 "\n"
-"<p>Um einen Datensatz der Liste zur Karte hinzuzufügen muss dieser zunächst "
+"<p>Um einen Datensatz der Liste zur Overlays hinzuzufügen muss dieser zunächst "
 "ausgewählt und dann der <strong>Layer hinzufügen</strong> Knopf gedrückt "
-"werden. Es können mehrere Layer zur Karte hinzugefügt werden. Wenn alle "
+"werden. Es können mehrere Layer zur Overlays hinzugefügt werden. Wenn alle "
 "gewünschten Layer hinzugefügt wurden, kann über den <strong>Fertig</strong> "
-"Knopf der Dialog geschlossen und zur Kartenansich zurückgegangen werden.</"
+"Knopf der Dialog geschlossen und zur Overlaysansich zurückgegangen werden.</"
 "p>\n"
 "\n"
 "<h5>Layer neuordnen oder entfernen</h5>\n"
@@ -4344,49 +4345,49 @@ msgstr ""
 "dieser abgewählt werden, um einen Layer zu entfernen muss dieser ausgewählt "
 "und der rote Minus Knopf betätigt werden.</p>\n"
 "\n"
-"<h5>Karte speichern</h5>\n"
+"<h5>Overlays speichern</h5>\n"
 "\n"
 "<p>Sobald ausreichend Layer und eine geeignete Zoomstufe eingestellt worden "
-"sind, kann die Karte gespeichert werden um Anderen die Möglichkeit zu geben "
-"diese zu verwenden. Klicke dafür den Karte Knopf -- links oben in der "
-"Werkzeugleiste -- und dort den Befehl Karte speichern. Im folgenden Dialog "
-"müssen für die Karte ein Titel, sowie eine Kurzbeschreibung vergeben werden."
+"sind, kann die Overlays gespeichert werden um Anderen die Möglichkeit zu geben "
+"diese zu verwenden. Klicke dafür den Overlays Knopf -- links oben in der "
+"Werkzeugleiste -- und dort den Befehl Overlays speichern. Im folgenden Dialog "
+"müssen für die Overlays ein Titel, sowie eine Kurzbeschreibung vergeben werden."
 "</p>\n"
 "\n"
-"<h4 id=\"exporting-a-map\">Karte veröffentlichen</h4>\n"
+"<h4 id=\"exporting-a-map\">Overlays veröffentlichen</h4>\n"
 "\n"
-"<p>Jede über GeoNode erstelle Karte kann als eingebettete Karte in einem "
-"Blog oder einer anderen Webseite genutzt werden. Um eine Karte zu "
+"<p>Jede über GeoNode erstelle Overlays kann als eingebettete Overlays in einem "
+"Blog oder einer anderen Webseite genutzt werden. Um eine Overlays zu "
 "veröffentlichen sind diese Schritte zu befolgen:</p>\n"
 "\n"
 "<ol>\n"
-"<li>Wähle eine Karte aus und öffne diese in der Ansicht</li>\n"
-"<li>Wähle im MapComposer Karte -- Karte veröffentlichen</li>\n"
-"<li>Bevor die Karte veröffentlicht werden kann, muss Sie gespeichert werden "
-"-- vergebe dafür Kartentitel und Kurzbeschreibung</li>\n"
-"<li>Wähle nachfolgend deine gewünschte Kartengröße und -breite</li>\n"
+"<li>Wähle eine Overlays aus und öffne diese in der Ansicht</li>\n"
+"<li>Wähle im MapComposer Overlays -- Overlays veröffentlichen</li>\n"
+"<li>Bevor die Overlays veröffentlicht werden kann, muss Sie gespeichert werden "
+"-- vergebe dafür Overlaystitel und Kurzbeschreibung</li>\n"
+"<li>Wähle nachfolgend deine gewünschte Overlaysgröße und -breite</li>\n"
 "<li>Kopiere den HTML-Code und füge diesen in deine iFrame unterstützende "
 "Webseite/Blog ein.</li>\n"
 "</ol>\n"
 "\n"
-"<p>Dadurch wird eine interaktive Karte in deiner Seite/ deinem Blog "
+"<p>Dadurch wird eine interaktive Overlays in deiner Seite/ deinem Blog "
 "angezeigt.</p>\n"
 "\n"
-"<h4 id=\"remixing-a-map\">Verändern/ Mischen von Karteninhalten</h4>\n"
-"<p>Jede gespeicherte Karte kann als Startpunkt füre eine neue Karte genutzt "
+"<h4 id=\"remixing-a-map\">Verändern/ Mischen von Overlaysinhalten</h4>\n"
+"<p>Jede gespeicherte Overlays kann als Startpunkt füre eine neue Overlays genutzt "
 "werden:</p>\n"
 "<ol>\n"
-"<li>Öffne die Karte im MapComposer</li>\n"
+"<li>Öffne die Overlays im MapComposer</li>\n"
 "<li>Veränderen Sie die Layer (entfernen, neue hinzufügen, Symbologie ändern) "
 "nach Wunsch</li>\n"
-"<li>Schwenken und Zoomen Sie zur gewünschten Ausdehnung der Karte</li>\n"
+"<li>Schwenken und Zoomen Sie zur gewünschten Ausdehnung der Overlays</li>\n"
 "<li><strong>WICHTIG</strong> verändern Sie den Titel und die "
-"Kurzbeschreibung der Karte, sowie ggf. die Kontaktinfo und Schlagwörter, um "
-"den Inhalten der neuen Karte zu entsprechen</li>\n"
-"<li>Speichern Sie die Karte</li>\n"
+"Kurzbeschreibung der Overlays, sowie ggf. die Kontaktinfo und Schlagwörter, um "
+"den Inhalten der neuen Overlays zu entsprechen</li>\n"
+"<li>Speichern Sie die Overlays</li>\n"
 "</ol>\n"
 "\n"
-"<p>Im Anschluss kann die neue Karte über den <a href=\"/maps\">Karten</a> "
+"<p>Im Anschluss kann die neue Overlays über den <a href=\"/maps\">Overlays</a> "
 "Reiter gefunden und betrachtet werden.</p>"
 
 #: geonode/templates/help.html:66
@@ -4403,19 +4404,19 @@ msgstr "Entwickler Zugang"
 
 #: geonode/templates/help.html:69
 msgid "Browsing Maps"
-msgstr "Karten durchsehen"
+msgstr "Overlays durchsehen"
 
 #: geonode/templates/help.html:70
 msgid "Creating a Map"
-msgstr "Karte erstellen"
+msgstr "Overlays erstellen"
 
 #: geonode/templates/help.html:71
 msgid "Exporting a Map"
-msgstr "Karte exportieren"
+msgstr "Overlays exportieren"
 
 #: geonode/templates/help.html:72
 msgid "Remixing a Map"
-msgstr "Remixen eine Karte"
+msgstr "Remixen eine Overlays"
 
 #: geonode/templates/index.html:6
 msgid "Welcome!"
@@ -4615,7 +4616,7 @@ msgstr "das folgende Dokument"
 #: geonode/templates/notification/layer_rated/full.txt:8
 #: geonode/templates/notification/layer_updated/full.txt:6
 msgid "You can visit the layer's detail page here"
-msgstr "Sie können die Seite mit den Details zu der Ebene hier ansehen"
+msgstr "Sie können die Seite mit den Details zu der Karte hier ansehen"
 
 #: geonode/templates/notification/document_rated/short.txt:3
 msgid "A document has been rated"
@@ -4631,90 +4632,90 @@ msgstr "Ein Dokument wurde aktualisiert"
 
 #: geonode/templates/notification/layer_comment/full.txt:3
 msgid "A comment has been posted for the layer"
-msgstr "Ein Kommentar wurde zu dieser Ebene hinzugefügt"
+msgstr "Ein Kommentar wurde zu dieser Karte hinzugefügt"
 
 #: geonode/templates/notification/layer_comment/short.txt:3
 msgid "A comment has been posted for a layer"
-msgstr "Ein Kommentar wurde zu einer Ebene hinzugefügt"
+msgstr "Ein Kommentar wurde zu einer Karte hinzugefügt"
 
 #: geonode/templates/notification/layer_created/full.txt:3
 msgid "uploaded the following layer"
-msgstr "Folgende Ebenen wurde hochgeladen"
+msgstr "Folgende Karten wurde hochgeladen"
 
 #: geonode/templates/notification/layer_created/short.txt:3
 msgid "A new layer has been uploaded"
-msgstr "Eine neue Ebene wurde hochgeladen"
+msgstr "Eine neue Karte wurde hochgeladen"
 
 #: geonode/templates/notification/layer_deleted/full.txt:3
 msgid "The following layer was deleted"
-msgstr "Die folgende Ebene wurde gelöscht"
+msgstr "Die folgende Karte wurde gelöscht"
 
 #: geonode/templates/notification/layer_deleted/short.txt:3
 msgid "A layer has been deleted"
-msgstr "Eine Ebene wurde gelöscht"
+msgstr "Eine Karte wurde gelöscht"
 
 #: geonode/templates/notification/layer_rated/full.txt:5
 msgid "the following layer"
-msgstr "die folgende Ebene"
+msgstr "die folgende Karte"
 
 #: geonode/templates/notification/layer_rated/short.txt:3
 msgid "A layer has been rated"
-msgstr "Eine Ebene wurde bewertet"
+msgstr "Eine Karte wurde bewertet"
 
 #: geonode/templates/notification/layer_updated/full.txt:3
 msgid "The following layer was updated"
-msgstr "Die folgende Ebene wurde aktualisiert"
+msgstr "Die folgende Karte wurde aktualisiert"
 
 #: geonode/templates/notification/layer_updated/short.txt:3
 msgid "A layer has been updated"
-msgstr "Eine Ebene wurde aktualisiert"
+msgstr "Eine Karte wurde aktualisiert"
 
 #: geonode/templates/notification/map_comment/full.txt:3
 msgid "A comment has been posted for the map"
-msgstr "Eine Karte wurde kommentiert"
+msgstr "Eine Overlays wurde kommentiert"
 
 #: geonode/templates/notification/map_comment/full.txt:6
 #: geonode/templates/notification/map_created/full.txt:6
 #: geonode/templates/notification/map_rated/full.txt:8
 #: geonode/templates/notification/map_updated/full.txt:6
 msgid "You can visit the map's detail page here"
-msgstr "Sie können die Seite mit den Details zu der Karte hier ansehen"
+msgstr "Sie können die Seite mit den Details zu der Overlays hier ansehen"
 
 #: geonode/templates/notification/map_comment/short.txt:3
 msgid "A comment has been posted for a map"
-msgstr "Eine Karte wurde kommentiert"
+msgstr "Eine Overlays wurde kommentiert"
 
 #: geonode/templates/notification/map_created/full.txt:3
 msgid "created the following map"
-msgstr "Die folgende Karte wurde erstellt"
+msgstr "Die folgende Overlays wurde erstellt"
 
 #: geonode/templates/notification/map_created/short.txt:3
 msgid "A map has been created"
-msgstr "Eine Karte wurde erstellt"
+msgstr "Eine Overlays wurde erstellt"
 
 #: geonode/templates/notification/map_deleted/full.txt:3
 msgid "The following map was deleted"
-msgstr "Die folgende Karte wurde gelöscht"
+msgstr "Die folgende Overlays wurde gelöscht"
 
 #: geonode/templates/notification/map_deleted/short.txt:3
 msgid "A map has been deleted"
-msgstr "Eine Karte wurde gelöscht"
+msgstr "Eine Overlays wurde gelöscht"
 
 #: geonode/templates/notification/map_rated/full.txt:5
 msgid "the following map"
-msgstr "die folgende Karte"
+msgstr "die folgende Overlays"
 
 #: geonode/templates/notification/map_rated/short.txt:3
 msgid "A map has been rated"
-msgstr "Eine Karte wurde bewertet"
+msgstr "Eine Overlays wurde bewertet"
 
 #: geonode/templates/notification/map_updated/full.txt:3
 msgid "The following map was updated"
-msgstr "Die folgende Karte wurde aktualisiert"
+msgstr "Die folgende Overlays wurde aktualisiert"
 
 #: geonode/templates/notification/map_updated/short.txt:3
 msgid "A map has been updated"
-msgstr "Eine Karte wurde aktualisiert"
+msgstr "Eine Overlays wurde aktualisiert"
 
 #: geonode/templates/notification/notice_settings.html:8
 #: geonode/templates/notification/notice_settings.html:11
