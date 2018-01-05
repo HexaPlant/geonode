@@ -957,8 +957,9 @@ CACHES = {
     #     }
 }
 
-LAYER_PREVIEW_LIBRARY = 'geoext'
+# LAYER_PREVIEW_LIBRARY = 'geoext'
 # LAYER_PREVIEW_LIBRARY = 'leaflet'
+LAYER_PREVIEW_LIBRARY = 'openseadragon'
 
 SERVICE_UPDATE_INTERVAL = 0
 

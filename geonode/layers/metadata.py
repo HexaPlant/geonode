@@ -62,6 +62,13 @@ def set_metadata(xml):
         identifier, vals, regions, keywords = dc2dict(exml)
     else:
         raise RuntimeError('Unsupported metadata format')
+
+    print "Importing",identifier
+    print "Date", vals["date"]
+    #print "Values", vals
+    #print "Regions",regions
+    #print "Keywords",keywords
+
     if not vals.get("date"):
         vals["date"] = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
@@ -109,6 +116,10 @@ def iso2dict(exml):
                 mdata.identification.otherconstraints[0]
 
         vals['purpose'] = mdata.identification.purpose
+
+        print 'Denominator',mdata.identification.denominators
+        if mdata.identification.denominators:
+            vals['denominator'] = mdata.identification.denominators[0]
 
     if mdata.dataquality is not None:
         vals['data_quality_statement'] = mdata.dataquality.lineage
@@ -220,9 +231,8 @@ def sniff_date(datestr):
         try:
             return datetime.datetime.strptime(datestr.strip(), dfmt)
         except (ValueError, AttributeError):
-            # pass
-            # TODO: FixMe, RMN: handle empty date stamp of xml metadata
-            return datetime.datetime.utcnow()
+            pass
+    return ""
 
 
 def get_tagname(element):

@@ -1,5 +1,7 @@
 {% load i18n %}
+{% load markdown_deux_tags %}
 {% verbatim %}
+
 <div class="row">
   <div ng-if="results.length == 0" ng-cloak>
     <div><h3>No content created yet.</h3></div>
@@ -12,11 +14,12 @@
         </div>
         <div class="col-xs-8 item-details">
           {% endverbatim %}
-          <button class="btn btn-default btn-xs pull-right" ng-if="cart" ng-click="cart.toggleItem(item)"><i ng-class="cart.getFaClass(item.id)" class="fa fa-lg"></i></button>
           {% verbatim %}
           <p class="item-meta"><span class="item-category">{{ item.category__gn_description }}</span></p>
           <h4><a href="{{ item.detail_url }}">{{ item.title }}</a></h4>
-          <p class="abstract">{{ item.abstract | limitTo: 300 }}{{ item.abstract.length  > 300 ? '...' : ''}}</p>
+
+          <p class="abstract">{{item.purpose }}</p>
+
           <div class="row">
             <div class="col-xs-12 item-items">
               <ul class="list-inline">

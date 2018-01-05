@@ -1,6 +1,7 @@
 {% extends "site_base.html" %}
 {% load i18n %}
 {% load bootstrap_tags %}
+{% load markdown_deux_tags %}
 
 {% block title %}{{ resource.title }} — {{ block.super }}{% endblock %}
 
@@ -41,12 +42,12 @@
     <dl class="dl-horizontal">
         {% if resource.title %}
         <dt>{% trans "Title" %}</dt>
-        <dd>{{ resource.title|truncatechars:80 }}</dd>
+        <dd>{{ resource.title }}</dd>
         {% endif %}
 
         {% if resource.abstract %}
         <dt>{% trans "Abstract" %}</dt>
-        <dd>{{ resource.abstract|escape|urlize|linebreaks|safe|truncatechars:1000 }}</dd>
+        <dd>{{ resource.abstract|escape|markdown}}</dd>
         {% endif %}
 
     </dl>
@@ -223,7 +224,7 @@
 
         {% if resource.purpose %}
         <dt>{% trans "Purpose" %}</dt>
-        <dd>{{ resource.purpose|escape|urlize|linebreaks|safe|truncatechars:160 }}</dd>
+        <dd>{{ resource.purpose|escape|urlize|linebreaks|safe }}</dd>
         {% endif %}
 
         {% if resource.language %}
@@ -243,7 +244,7 @@
 
         {% if resource.supplemental_information %}
         <dt>{% trans "Supplemental Information" %}</dt>
-        <dd>{{ resource.supplemental_information|truncatechars:160|escape|urlize|linebreaks|safe }}</dd>
+        <dd>{{ resource.supplemental_information|escape|markdown}}</dd>
         {% endif %}
 
         {% if resource.spatial_representation_type %}
@@ -310,9 +311,21 @@
         <dt>{% trans "Online Link" %}</dt>
         <dd><a href="{{ resource.get_absolute_url }}/download">{{ resource.get_absolute_url }}/download</a></dd>
         {% endif %}
+    </dl>
 
-        <hr>
-
+    <span class="subtitle">Original</span>
+    <div class="sep_title"><hr></div>
+    <dl class="dl-horizontal">
+        <dt>JPEG Standard</dt>
+        <dd><a href="http://iiif.woldan.oeaw.ac.at?IIIF={{resource.name}}.tif/full/,3000/0/default.jpg" >{{resource.name}}.jpg</a></dd>
+        <dt>JPEG Large</dt>
+        <dd><a href="http://iiif.woldan.oeaw.ac.at?IIIF={{resource.name}}.tif/full/,5000/0/default.jpg">{{resource.name}}.jpg</a></dd>
+        <dt>GeoTIFF</dt>
+        <dd><a href="http://iiif.woldan.oeaw.ac.at/image/{{resource.name}}.tif">{{resource.name}}.tif</a></dd>
+    </dl>
+    <span class="subtitle">Transformiert</span>
+    <div class="sep_title"><hr></div>
+    <dl class="dl-horizontal">
         {% for link in resource.link_set.download %}
         <dt>{{link.name}}</dt>
         <dd><a href="{{link.url}}">{{resource.title}}.{{link.extension}}</a></dd>
