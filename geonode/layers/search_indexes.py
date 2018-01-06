@@ -62,7 +62,7 @@ class LayerIndex(indexes.SearchIndex, indexes.Indexable):
     bbox_right = indexes.FloatField(model_attr="bbox_x1", null=True, stored=False)
     bbox_bottom = indexes.FloatField(model_attr="bbox_y0", null=True, stored=False)
     bbox_top = indexes.FloatField(model_attr="bbox_y1", null=True, stored=False)
-    denominator = indexes.IntegerField(model_attr="denominator", default=0)
+    denominator = indexes.IntegerField(model_attr="denominator", default=100000000)
     temporal_extent_start = indexes.DateTimeField(
         model_attr="temporal_extent_start",
         null=True,
