@@ -388,15 +388,15 @@ LOGGING = {
     },
     "loggers": {
         "django": {
-            "handlers": ["console"], "level": "DEBUG", },
+            "handlers": ["console"], "level": "INFO", },
         "geonode": {
-            "handlers": ["console"], "level": "DEBUG", },
+            "handlers": ["console"], "level": "INFO", },
         "gsconfig.catalog": {
-            "handlers": ["console"], "level": "DEBUG", },
+            "handlers": ["console"], "level": "INFO", },
         "owslib": {
-            "handlers": ["console"], "level": "DEBUG", },
+            "handlers": ["console"], "level": "INFO", },
         "pycsw": {
-            "handlers": ["console"], "level": "DEBUG", },
+            "handlers": ["console"], "level": "INFO", },
         },
     }
 
@@ -527,9 +527,9 @@ ACTSTREAM_SETTINGS = {
 }
 
 # Settings for Social Apps
-REGISTRATION_OPEN = strtobool(os.getenv('REGISTRATION_OPEN', 'False'))
+REGISTRATION_OPEN = strtobool(os.getenv('REGISTRATION_OPEN', 'True'))
 ACCOUNT_EMAIL_CONFIRMATION_EMAIL = strtobool(
-    os.getenv('ACCOUNT_EMAIL_CONFIRMATION_EMAIL', 'False')
+    os.getenv('ACCOUNT_EMAIL_CONFIRMATION_EMAIL', 'True')
 )
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = strtobool(
     os.getenv('ACCOUNT_EMAIL_CONFIRMATION_REQUIRED', 'False')
@@ -779,7 +779,7 @@ CKAN_ORIGINS = [{
 # Setting TWITTER_CARD to True will enable Twitter Cards
 # https://dev.twitter.com/cards/getting-started
 # Be sure to replace @GeoNode with your organization or site's twitter handle.
-TWITTER_CARD = True
+TWITTER_CARD = False
 TWITTER_SITE = '@GeoNode'
 TWITTER_HASHTAGS = ['geonode']
 
@@ -791,7 +791,7 @@ OPENGRAPH_ENABLED = True
 # Detail Display: above, below, never
 # Metadata Options: verbose, light, never
 LICENSES = {
-    'ENABLED': True,
+    'ENABLED': False,
     'DETAIL': 'above',
     'METADATA': 'verbose',
 }
