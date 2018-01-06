@@ -686,16 +686,17 @@ def create_thumbnail(instance, thumbnail_remote_url, thumbnail_create_url=None,
 
     try:
         name = instance.name
-        print "Create thumbnail %s for %s"%(thumbnail_path,name)
+        logger.info ("Create thumbnail %s for %s"%(thumbnail_path,name))
 
         thumbnail_create_url_new ="http://iiif.woldan.oeaw.ac.at?IIIF=%s.tif/full/,512/0/default.jpg"%name
 
-        print "Try to fetch thumbnail from % s"%thumbnail_create_url_new
+        logger.info ("Try to fetch thumbnail from % s"%thumbnail_create_url_new)
+
         request = requests.get(thumbnail_create_url_new)
         if request.status_code == 200:
             thumbnail_create_url = thumbnail_remote_url = thumbnail_create_url_new
 
-        print "Fetching thumbnail from % s"%thumbnail_remote_url
+        logger.info ("Fetching thumbnail from % s"%thumbnail_remote_url)
 
     except AttributeError:
         pass
