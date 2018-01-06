@@ -46,7 +46,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Setting debug to true makes Django serve static media and
 # present pretty error pages.
-DEBUG = strtobool(os.getenv('DEBUG', 'False'))
+DEBUG = strtobool(os.getenv('DEBUG', 'True'))
 
 # Set to True to load non-minified versions of (static) client dependencies
 # Requires to set-up Node and tools that are required for static development
@@ -349,7 +349,7 @@ INSTALLED_APPS = (
     'guardian',
     'oauth2_provider',
     'markdown_deux',
-    'debug_toolbar',
+#    'debug_toolbar',
 
 ) + GEONODE_APPS
 
@@ -454,7 +454,7 @@ MIDDLEWARE_CLASSES = (
     # SessionAuthenticationMiddleware is NOT required for using django-oauth-toolkit.
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+#    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 
