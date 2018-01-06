@@ -242,6 +242,11 @@
                               <li><a href="{{ link.url }}" target="_blank">{% trans link.name %}</a></li>
                               {% endfor %}
                             </ul>
+                            <ul>
+                              {% for link in links %}
+                              <li><a href="{{ link.url }}" target="_blank">{% trans link.name %}</a></li>
+                              {% endfor %}
+                            </ul>
                         </li>
                     </div>
                 {% endif %}
