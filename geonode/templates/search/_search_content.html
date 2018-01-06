@@ -5,7 +5,7 @@
       <div class="col-xs-12">
          <div class="selections">
             {% trans "Filters" %}
-            <a href="." id="clear-search" class="pull-right">{% trans "Clear" %}</a>
+            <a href="." id="clear-search" class="pull-right">Zurücksetzen</a>
         </div>
             {% if SEARCH_FILTERS.TEXT_ENABLED %}
               {% include "search/_text_filter.html" %}
@@ -32,10 +32,6 @@
     </div>
   </div>
   <div class="col-md-9">
-    <div class="col-md-2">
-      <span>Total: </span>
-      <span ng-bind="total_counts"></span>
-    </div>
     {% include "search/_sort_filters.html" %}
     <div class="col-md-12 grid-spacer">
     {% include 'base/_resourcebase_snippet.html' %}

@@ -72,7 +72,7 @@ class CommonMetaApi:
                  'owner': ALL_WITH_RELATIONS,
                  'date': ALL,
                  }
-    ordering = ['date', 'title', 'popular_count']
+    ordering = ['date', 'title', 'popular_count','denominator']
     max_limit = None
 
 
@@ -100,6 +100,7 @@ class CommonModelApi(ModelResource):
         'share_count',
         'popular_count',
         'srid',
+        'denominator',
         'category__gn_description',
         'supplemental_information',
         'thumbnail_url',
@@ -361,6 +362,12 @@ class CommonModelApi(ModelResource):
         elif sort.lower() == "date":
             sqs = (
                 SearchQuerySet() if sqs is None else sqs).order_by("date")
+        elif sort.lower() == "-denominator":
+            sqs = (
+                SearchQuerySet() if sqs is None else sqs).order_by("-denominator")
+        elif sort.lower() == "denominator":
+            sqs = (
+                SearchQuerySet() if sqs is None else sqs).order_by("denominator")
         elif sort.lower() == "title":
             sqs = (SearchQuerySet() if sqs is None else sqs).order_by(
                 "title_sortable")
@@ -372,7 +379,7 @@ class CommonModelApi(ModelResource):
                 "-popular_count")
         else:
             sqs = (
-                SearchQuerySet() if sqs is None else sqs).order_by("-date")
+                SearchQuerySet() if sqs is None else sqs).order_by("denominator")
 
         return sqs
 
