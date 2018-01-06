@@ -56,23 +56,23 @@
                 <li><a href="{% url "layer_browse" %}">Karten</a></li>
                 <li><a href="{% url "document_browse" %}">Dokumente</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
+                <li><a href="{% url "services" %}">Remote Services</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url "layer_upload" %}">Importiere Karte</a></li>
                 <li><a href="{% url "document_upload" %}">Importiere Dokument</a></li>
-                <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
+                <li><a href="{% url "register_service" %}">Konfiguriere Remote Service</a></li>
                 {% endif %}
               </ul>
             </li>
 	        <li id="nav_maps">
               {% if user.is_authenticated %}
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Maps" %}<i class="fa fa-angle-down fa-lg"></i></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Overlays<i class="fa fa-angle-down fa-lg"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="{% url "maps_browse" %}">{% trans "Explore Maps" %}</a></li>
-                <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
+                <li><a href="{% url "maps_browse" %}">Erkunde Overlays</a></li>
+                <li> <a href="{% url "new_map" %}">Erstelle Overlay</a></li>
               </ul>
               {% else %}
-              <a href="{% url "maps_browse" %}">{% trans "Maps" %}</a>
+              <a href="{% url "maps_browse" %}">Overlays</a>
               {% endif %}
             </li>
             <li>
@@ -157,45 +157,44 @@
       <div class="row">
         <div class="col-md-2">
           <ul class="list-unstyled">
-            <li>Data</li>
-            <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
-            <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
+            <li>Karten</li>
+            <li><a href="{% url "layer_browse" %}">Karten</a></li>
+            <li><a href="{% url "document_browse" %}">Dokumente</a></li>
             {% if user.is_authenticated %}
-            <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
-            <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
-            <li><a href="{% url "document_upload" %}">Upload Document</a></li>
-            <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
+            <li><a href="{% url "services" %}">Remote Services</a></li>
+            <li><a href="{% url "layer_upload" %}">Importiere Karte</a></li>
+            <li><a href="{% url "document_upload" %}">Importiere Karte</a></li>
+            <li><a href="{% url "register_service" %}">Erstelle Remote Service</a></li>
             {% endif %}
           </ul>
         </div>
         <div class="col-md-2">
           <ul class="list-unstyled">
-            <li>Maps</li>
-            <li><a href="{% url "maps_browse" %}">{% trans "Explore Maps" %}</a></li>
+            <li>Overlays</li>
+            <li><a href="{% url "maps_browse" %}">Erkunde Overlays</a></li>
             {% if user.is_authenticated %}
-            <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
+            <li> <a href="{% url "new_map" %}">Erstelle Overlays</a></li>
             {% endif %}
           </ul>
         </div>
 		<div class="col-md-2">
           <ul class="list-unstyled">
-            <li>About</li>
-            <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
-            <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+            <li>Über</li>
+            <li><a href="{% url "profile_browse" %}">Personen</a></li>
+            <li><a href="{% url "group_list" %}">Gruppen</a></li>
             {% if perms.announcements.can_manage %}
-            <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+            <li><a href="{% url "announcements_list" %}">Ankündigen</a></li>
             {% endif %}
             {% if user.is_superuser %}
-            <li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
-            <li><a href="{% url "account_invite_user" %}">{% trans "Invite User" %}</a></li>
-            <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
+            <li><a href="/admin/people/profile/add/">Erstelle Benutzer</a></li>
+            <li><a href="{% url "account_invite_user" %}">Benutzer einladen</a></li>
+            <li><a href="{% url "group_create" %}">Erstelle Gruppe</a></li>
             {% endif %}
           </ul>
         </div>
         <div class="col-md-6 text-right">
           <ul class="list-unstyled">
-            <li>{% trans "Powered by" %} <a href="http://geonode.org">{% trans "GeoNode" %}</a> <em>{% trans "version" %} {{ VERSION }}</em></li>
-            <li><a href="{% url "developer" %}">{% trans "Developers" %}</a> | <a href="{% url "about" %}">{% trans "About" %}</a><li>
+            <li>Basierend auf  <a href="https://github.com/HexaPlant/woldan">{% trans "GeoNode" %}</a> <em>{% trans "version" %} {{ VERSION }}</em></li>
           </ul>
           <label class="hidden">{% trans "Language" %}</label>
           {% if csrf_token != "NOTPROVIDED" %}
@@ -274,7 +273,7 @@
     {% include 'autocomplete_light/static.html' %}
     <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
     {% block extra_script %}{% endblock extra_script %}
-    
+
     <script type="text/javascript" src="{% url "lang" %}"></script>
 
   </body>
