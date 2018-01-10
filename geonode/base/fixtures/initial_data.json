@@ -283,7 +283,18 @@
             "gn_description": "Globus",
             "is_choice": true,
             "fa_class": "fa-globe",
-            "identifier": "Globus"
+            "identifier": "globus"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "base.topiccategory",
+        "fields": {
+            "description": "Sammelwerk",
+            "gn_description": "Sammelwerk",
+            "is_choice": true,
+            "fa_class": "fa-archive",
+            "identifier": "sammelwerk"
         }
     },
     {
