@@ -71,6 +71,8 @@
                 <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
                 {% if perms.announcements.can_manage %}
                 <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+                <li><a href="https://www.oeaw.ac.at/forschung-institute/bibliothek-archiv-sammlungen/sammlungen/">Sammlung Woldan</a></li>
+
                 {% endif %}
                 {% if user.is_superuser %}
                 <li role="separator" class="divider"></li>
@@ -149,12 +151,6 @@
             <li>Karten</li>
             <li><a href="{% url "layer_browse" %}">Karten</a></li>
             <li><a href="{% url "document_browse" %}">Dokumente</a></li>
-            {% if user.is_authenticated %}
-            <li><a href="{% url "services" %}">Remote Services</a></li>
-            <li><a href="{% url "layer_upload" %}">Importiere Karte</a></li>
-            <li><a href="{% url "document_upload" %}">Importiere Karte</a></li>
-            <li><a href="{% url "register_service" %}">Erstelle Remote Service</a></li>
-            {% endif %}
           </ul>
         </div>
         <div class="col-md-2">
