@@ -862,7 +862,6 @@ DOWNLOAD_FORMATS_RASTER = [
     'Original untransformiertes TIFF',
     'GeoTIFF',
     'View in Google Earth'
-
 ]
 
 ACCOUNT_NOTIFY_ON_PASSWORD_CHANGE = False
