@@ -298,6 +298,17 @@
         }
     },
     {
+        "pk": 27,
+        "model": "base.topiccategory",
+        "fields": {
+            "description": "Dokument",
+            "gn_description": "Dokument",
+            "is_choice": true,
+            "fa_class": "fa-archive",
+            "identifier": "dokument"
+        }
+    },
+    {
         "pk": 2,
         "model": "base.spatialrepresentationtype",
         "fields": {
