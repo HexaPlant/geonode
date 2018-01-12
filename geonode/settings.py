@@ -143,6 +143,7 @@ _DEFAULT_LANGUAGES = (
 #LANGUAGES = os.getenv('LANGUAGES', _DEFAULT_LANGUAGES)
 LANGUAGES = [
     ('de', 'Deutsch'),
+    ('en', 'English'),
 ]
 
 
