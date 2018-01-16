@@ -1,10 +1,11 @@
-[{
+[
+{
 	"fields": {
 		"date_joined": "2011-06-09 15:15:27",
 		"email": "ad@m.in",
 		"first_name": "",
 		"groups": [],
-		"is_active": true,
+		"is_active": false,
 		"is_staff": true,
 		"is_superuser": true,
 		"last_login": "2011-06-09 15:45:34",
@@ -15,4 +16,36 @@
 	},
 	"model": "people.Profile",
 	"pk": 1000
-}]
+}
+{
+  "fields": {
+    "profile": "",
+    "last_name": "",
+    "is_staff": true,
+    "user_permissions": [],
+    "date_joined": "2018-01-16T14:17:50",
+    "city": "Wien",
+    "first_name": "",
+    "area": "Wien",
+    "zipcode": "1230",
+    "is_superuser": true,
+    "last_login": null,
+    "email": "SammlungWoldan@oeaw.ac.at",
+    "username": "SammlungWoldan",
+    "fax": "",
+    "is_active": true,
+    "delivery": "Dr. Ignaz Seipel-Platz 2",
+    "groups": [
+      1
+    ],
+    "organization": "\u00d6sterreichische Akademie der Wissenschaften",
+    "password": "pbkdf2_sha256$20000$7SwgyYpylXT3$AMVmCp/uSiBxjJtiKDAymPFfG4uPNFC8QORs2czbq+E=",
+    "country": "AUT",
+    "position": "",
+    "voice": ""
+  },
+  "model": "people.profile",
+  "pk": 1001
+}
+
+]
