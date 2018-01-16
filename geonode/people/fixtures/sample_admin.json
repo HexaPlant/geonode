@@ -16,7 +16,7 @@
 	},
 	"model": "people.Profile",
 	"pk": 1000
-}
+},
 {
   "fields": {
     "profile": "",
@@ -47,5 +47,4 @@
   "model": "people.profile",
   "pk": 1001
 }
-
 ]
