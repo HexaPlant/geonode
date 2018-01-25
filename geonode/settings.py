@@ -722,8 +722,8 @@ DEFAULT_MAP_CENTER = (0, 0)
 DEFAULT_MAP_ZOOM = 0
 
 ALT_OSM_BASEMAPS = os.environ.get('ALT_OSM_BASEMAPS', False)
-CARTODB_BASEMAPS = os.environ.get('CARTODB_BASEMAPS', False)
-STAMEN_BASEMAPS = os.environ.get('STAMEN_BASEMAPS', False)
+CARTODB_BASEMAPS = os.environ.get('CARTODB_BASEMAPS', True)
+STAMEN_BASEMAPS = os.environ.get('STAMEN_BASEMAPS', True)
 THUNDERFOREST_BASEMAPS = os.environ.get('THUNDERFOREST_BASEMAPS', False)
 MAPBOX_ACCESS_TOKEN = os.environ.get('MAPBOX_ACCESS_TOKEN', None)
 BING_API_KEY = os.environ.get('BING_API_KEY', None)
@@ -740,10 +740,29 @@ MAP_BASELAYERS = [{
     "source": {"ptype": "gxp_osmsource"},
     "type": "OpenLayers.Layer.OSM",
     "name": "mapnik",
-    "visibility": True,
+    "visibility": False,
     "fixed": True,
     "group": "background"
-}]
+}, {
+    "source": {"ptype": "gxp_olsource"},
+    "type":"OpenLayers.Layer.XYZ",
+    "args":[
+    "ESRI World Physical Map", ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}"],
+    {"transitionEffect": "resize","attribution": "ESRI"}],
+    "visibility": True,
+    "fixed": True,
+    "group":"background"
+}, {
+    "source": {"ptype": "gxp_olsource"},
+    "type":"OpenLayers.Layer.XYZ",
+    "args":[
+    "ESRI World Imagery", ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}"],
+    {"transitionEffect": "resize","attribution": "ESRI"}],
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+}
+]
 
 SOCIAL_BUTTONS = True
 
