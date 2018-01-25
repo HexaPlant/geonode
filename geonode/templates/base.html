@@ -55,7 +55,7 @@
               <ul class="dropdown-menu">
                 <li><a href="{% url "layer_browse" %}">Karten</a></li>
                 <li><a href="{% url "document_browse" %}">Dokumente</a></li>
-                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
                 <li><a href="{% url "services" %}">Remote Services</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url "layer_upload" %}">Importiere Karte</a></li>
@@ -97,9 +97,11 @@
                 <li><a href="{{ user.get_absolute_url }}">{% trans "Profile" %}</a></li>
                 <li><a href="{% url "recent-activity" %}">{% trans "Recent Activity" %}</a></li>
                 <li><a href="{% url "messages_inbox" %}">{% trans "Inbox" %}</a></li>
+                {% if user.is_superuser %}
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url "admin:index" %}">Admin</a></li>
                 <li><a href="{{ GEOSERVER_BASE_URL }}">GeoServer</a></li>
+                {% endif %}
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url "help" %}">{% trans "Help" %}</li>
                 <li role="separator" class="divider"></li>
