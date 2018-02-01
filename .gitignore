@@ -10,7 +10,9 @@ dist
 # supporting stuff pulled in by paver script
 geonode/development.db
 /geoserver/
-downloaded
+downloaded/
+image/
+tmp/
 
 docs/i18n/pot/
 
