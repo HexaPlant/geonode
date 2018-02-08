@@ -539,8 +539,14 @@ ACCOUNT_APPROVAL_REQUIRED = strtobool(
 
 # Email for users to contact admins.
 THEME_ACCOUNT_CONTACT_EMAIL = os.getenv(
-    'THEME_ACCOUNT_CONTACT_EMAIL', 'atrawog@hexaplant.com'
+    'THEME_ACCOUNT_CONTACT_EMAIL', 'SammlungWoldan@oeaw.ac.at'
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'SammlungWoldan@oeaw.ac.at'
+EMAIL_HOST_USER = 'smtp.oeaw.ac.at'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
 
 #
 # Test Settings
