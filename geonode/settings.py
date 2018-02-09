@@ -32,7 +32,6 @@ from distutils.util import strtobool
 import djcelery
 import dj_database_url
 
-
 #
 # General Django development settings
 #
@@ -309,6 +308,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.humanize',
     'django.contrib.gis',
+    'django_comments',
 
     # Third party apps
 
@@ -349,6 +349,8 @@ INSTALLED_APPS = (
     'guardian',
     'oauth2_provider',
     'markdown_deux',
+#    'tagging',
+#    'zinnia',
 #    'debug_toolbar',
 
 ) + GEONODE_APPS
@@ -423,6 +425,7 @@ TEMPLATES = [
                 'account.context_processors.account',
                 'geonode.context_processors.resource_urls',
                 'geonode.geoserver.context_processors.geoserver_urls',
+#                'zinnia.context_processors.version',
             ],
             'debug': DEBUG,
         },
@@ -815,7 +818,7 @@ OPENGRAPH_ENABLED = True
 # Detail Display: above, below, never
 # Metadata Options: verbose, light, never
 LICENSES = {
-    'ENABLED': False,
+    'ENABLED': True,
     'DETAIL': 'above',
     'METADATA': 'verbose',
 }

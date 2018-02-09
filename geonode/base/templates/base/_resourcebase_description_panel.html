@@ -3,10 +3,15 @@
 {% block content %}
 
 <dl class="dl-horizontal">
+
+
+
     {% if resource.abstract %}
     <dt>{% trans "Abstract" %}</dt>
     <dd itemprop="description">{{ resource.abstract|markdown }}</dd>
     {% endif %}
+
+
 
     {% if resource.date %}
     <dt>{% trans resource.date_type|title %} {% trans "Date" %}</dt>
@@ -18,6 +23,9 @@
         <dd itemprop="dateModified" datetime="{{ resource.date|date:"c"}}">{{ resource.date }}</dd>
       {% endif %}
     {% endif %}
+
+    <dt>{% trans "License" %}</dt>
+    <dd><a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)}</a></dd>
 
     {% if resource.display_type %}
     <dt>{% trans "Type" %}</dt>
@@ -78,18 +86,7 @@
     <dd>{{ resource.srid }}</dd>
     {% endif %}
 
-    {% if LICENSES_ENABLED and LICENSES_DETAIL == 'below' and resource.license %}
-    <dt>{% trans "License" %}</dt>
-    <dd>{{ resource.license.name_long }} <a href="#license-more-below" data-toggle="collapse" data-target=".license-more-below"><i class="fa fa-info-circle"></i></a></dd>
-      <dd class="license-more-below collapse">
-        {% for bullet in resource.license.description_bullets %}
-          {{ bullet }}<br/><br/>
-        {% endfor %}
-        {% if resource.license.url %}
-          + For more info see <a href="{{ resource.license.url }}">{{ resource.license.url }}</a>.
-        {% endif %}
-      </dd>
-    {% endif %}
+
 
     {% if resource.maintenance_frequency %}
     <dt>{% trans "Maintenance Frequency" %}</dt>
@@ -130,14 +127,15 @@
     <dd>{{ resource.data_quality_statement }}</dd>
     {% endif %}
 
-
-
     {% if resource.spatial_representation_type %}
     <dt>{% trans "Spatial Representation Type" %}</dt>
     <dd>{{ resource.spatial_representation_type }}</dd>
     {% endif %}
 
-  </div>
+
+
+
+    </div>
 
   </dl>
 
