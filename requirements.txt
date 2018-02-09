@@ -77,5 +77,6 @@ django-markdown-deux
 django-debug-toolbar
 python-magic
 six==1.10.0
+django-contrib-comments
 #django-tagging
 #django-blog-zinnia
