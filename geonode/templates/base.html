@@ -45,7 +45,7 @@
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 	        <i class="fa fa-navicon fa-lg"></i>
 	      </button>
-	      <a class="navbar-brand" href="{% url "home" %}">GeoNode</a>
+	      <a class="navbar-brand" href="https://www.oeaw.ac.at/">GeoNode</a>
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav toolbar">
@@ -68,6 +68,9 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %}<i class="fa fa-angle-down fa-lg"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="https://www.oeaw.ac.at/forschung-institute/bibliothek-archiv-sammlungen/sammlungen/">Sammlung Woldan</a></li>
+                <li><a href="/impressum/">Impressum</a></li>
+                <li><a href="/kontakt/">Kontakt</a></li>
+
 
                 {% if user.is_superuser %}
                 <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
@@ -87,6 +90,7 @@
             {% endblock %}
           </ul>
 	      <ul class="nav navbar-nav navbar-right">
+           <a href="http://sammlung.woldan.oeaw.ac.at/"><img src=/static/geonode/img/WGD_logo.jpg height=70/></a>
 
             {% if not user.is_authenticated and REGISTRATION_OPEN %}
             <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>

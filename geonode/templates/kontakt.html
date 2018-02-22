@@ -1,0 +1,17 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About GeoNode" %} — {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<p><img src="/static/geonode/Kontakt/kontakt.jpg" alt="Kontakt" style="margin-right:100px;">
+		<h2>Kontakt</h2>
+			<p>Österreichische Akademie der Wissenschaften<br />
+			BAS:IS<br />
+			Bibliothek, Archiv, Sammlungen: Information &#38; Service<br />
+			Dr. Ignaz Seipel-Platz 2<br />
+			1010 Wien<br />
+			✆+43 1 51581-1600<br />
+			&#9993;SammlungWoldan&#64;oeaw.ac.at<br />
+		</p>
+{% endblock %}
