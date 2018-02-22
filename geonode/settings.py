@@ -97,7 +97,7 @@ MANAGERS = ADMINS = os.getenv('ADMINS', [])
 TIME_ZONE = os.getenv('TIME_ZONE', "Europe/Vienna")
 
 SITE_ID = int(os.getenv('SITE_ID', '1'))
-DEFAULT_DOMAIN = 'sammlung.woldan.oeaw.ac.at' 
+
 
 USE_I18N = strtobool(os.getenv('USE_I18N', 'True'))
 USE_L10N = strtobool(os.getenv('USE_I18N', 'True'))
@@ -552,6 +552,9 @@ EMAIL_HOST_USER = 'SammlungWoldan@oeaw.ac.at'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 FAIL_SILENT = False
+
+DEFAULT_DOMAIN = 'sammlung.woldan.oeaw.ac.at'
+ServerAdmin = 'SammlungWoldan@oeaw.ac.at'
 
 #
 # Test Settings
