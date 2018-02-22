@@ -546,10 +546,11 @@ THEME_ACCOUNT_CONTACT_EMAIL = os.getenv(
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'SammlungWoldan@oeaw.ac.at'
-EMAIL_HOST_USER = 'smtp.oeaw.ac.at'
+EMAIL_HOST_USER = 'SammlungWoldan@oeaw.ac.at'
+EMAIL_HOST = 'smtp.oeaw.ac.at'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
+FAIL_SILENT = False
 
 #
 # Test Settings
