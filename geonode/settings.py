@@ -554,6 +554,7 @@ EMAIL_USE_TLS = False
 FAIL_SILENT = False
 
 DEFAULT_DOMAIN = 'sammlung.woldan.oeaw.ac.at'
+DEFAULT_FROM_EMAIL = 'SammlungWoldan@oeaw.ac.at'
 ServerAdmin = 'SammlungWoldan@oeaw.ac.at'
 
 #
