@@ -1,4 +1,26 @@
-{% load i18n account_tags %}{% blocktrans with site_name=current_site.name %}A user on {{ site_name }} has created an account using this email address.
+{% load i18n account_tags %}{% blocktrans with site_name=current_site.name %}
+Hallo,
+
+Vielen Dank für Ihre Registrierung auf „{{ site_name }}“.
+
+Um den Registrierungsvorgang abzuschließen klicken Sie bitte auf folgenden Link bzw. kopieren Sie den Link und fügen ihn in die Adresszeile Ihres Internetbrowsers ein:
+
+{{ activate_url }}
+
+Sie können anschließend die erweiterten Funktionen unseres Kartenportals nutzen.
+
+Bei Rückfragen wenden Sie sich bitte an unseren Helpdesk: sammlungwoldan@oeaw.ac.at
+
+
+
+Mit freundlichen Grüßen
+
+Ihr Sammlung Woldan Team
+
+
+
+
+A user on {{ site_name }} has created an account using this email address.
 
 To confirm this email address, go to {{ activate_url }}
 
