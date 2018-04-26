@@ -16,7 +16,7 @@
         "fields": {
             "description": "legal land descriptions. Examples: political and administrative boundaries",
             "gn_description": "Boundaries",
-            "is_choice": false,
+            "is_choice
             "fa_class": "fa-ellipsis-h",
             "identifier": "boundaries"
         }
@@ -373,11 +373,11 @@
         "pk": 1,
         "model": "base.license",
         "fields": {
-            "identifier": "CC_BY_SA",
-            "name":"Creative Commons Attribution-ShareAlike 4.0 International",
-            "abbreviation":"CC BY-SA 4.0",
+            "identifier": "CC_BY",
+            "name":"Creative Commons Attribution 4.0 International",
+            "abbreviation":"CC BY 4.0",
             "description":"",
-            "url":"https://creativecommons.org/licenses/by-sa/4.0/",
+            "url":"https://creativecommons.org/licenses/by/4.0/",
             "license_text":""
         }
     },
