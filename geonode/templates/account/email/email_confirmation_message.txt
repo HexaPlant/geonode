@@ -1,8 +1,6 @@
-{% load i18n account_tags %}
-
 Hallo,
 
-vielen Dank für Ihre Registrierung auf „{{ site_name }}“.
+vielen Dank für Ihre Registrierung auf sammlung.woldan.ac.at
 
 Um den Registrierungsvorgang abzuschließen klicken Sie bitte auf folgenden Link bzw. kopieren Sie den Link und fügen ihn in die Adresszeile Ihres Internetbrowsers ein:
 

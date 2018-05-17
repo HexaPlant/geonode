@@ -1,1 +1,1 @@
-{% load i18n %}Registrierung für {{ site_name }}
+Registrierung auf sammlung.woldan.ac.at
