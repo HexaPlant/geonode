@@ -19,6 +19,8 @@ docs/i18n/pot/
 # Static media handling
 *.jshintrc
 geonode/settings.py
+geonode/settings_prod.py
+geonode/settings_dev.py
 geonode/static/.components/
 geonode/static/geoexplorer/
 geonode/static_root/
