@@ -45,18 +45,19 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Setting debug to true makes Django serve static media and
 # present pretty error pages.
-DEBUG = strtobool(os.getenv('DEBUG', 'True'))
+#DEBUG = strtobool(os.getenv('DEBUG', 'True'))
+DEBUG = False
 
 # Set to True to load non-minified versions of (static) client dependencies
 # Requires to set-up Node and tools that are required for static development
 # otherwise it will raise errors for the missing non-minified dependencies
-DEBUG_STATIC = strtobool(os.getenv('DEBUG_STATIC', 'False'))
+DEBUG_STATIC = False
 
 # This is needed for integration tests, they require
 # geonode to be listening for GeoServer auth requests.
 os.environ['DJANGO_LIVE_TEST_SERVER_ADDRESS'] = 'localhost:8000'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', 'django', 'geonode', 'geonode-devel', 'geonode.hexaplant.com', 'geonode-devel.hexaplant.com'])
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', 'sammlung.woldan.oeaw.ac.at','sammlung-test.woldan.oeaw.ac.at','django', 'geonode', 'geonode-devel', 'geonode.hexaplant.com', 'geonode-devel.hexaplant.com'])
 
 INTERNAL_IPS =['127.0.0.1']
 
@@ -75,17 +76,26 @@ AUTH_IP_WHITELIST = []
 _DEFAULT_SECRET_KEY = 'myv-y4#7j-d*p-__@j#*3z@!y24fz8%^z2v6atuy4bo9vqr1_a'
 SECRET_KEY = os.getenv('SECRET_KEY', _DEFAULT_SECRET_KEY)
 
+#DATABASE_URL = os.getenv(
+#    'DATABASE_URL',
+#    'sqlite:///{path}'.format(
+#        path=os.path.join(PROJECT_ROOT, 'development.db')
+#    )
+#)
+
+
 DATABASE_URL = os.getenv(
-    'DATABASE_URL',
-    'sqlite:///{path}'.format(
-        path=os.path.join(PROJECT_ROOT, 'development.db')
-    )
+    'DATABASE_URL','postgres://woldan:Ahpeir2E@127.0.0.1:5432/woldandb'
 )
+
+
 
 # Defines settings for development
 DATABASES = {
     'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
 }
+
+ADMINS = [('Andreas Trawoeger', 'atrawog@hexaplant.com')]
 
 MANAGERS = ADMINS = os.getenv('ADMINS', [])
 
@@ -194,9 +204,11 @@ LOCAL_MEDIA_URL = os.getenv('LOCAL_MEDIA_URL', "/uploaded/")
 
 # Absolute path to the directory that holds static files like app media.
 # Example: "/home/media/media.lawrence.com/apps/"
+
 STATIC_ROOT = os.getenv('STATIC_ROOT',
-                        os.path.join(PROJECT_ROOT, "static_root")
+                        os.path.join(PROJECT_ROOT, "/code/woldan/geonode/static")
                         )
+
 
 # URL that handles the static files like app media.
 # Example: "http://media.lawrence.com"
@@ -204,7 +216,7 @@ STATIC_URL = os.getenv('STATIC_URL', "/static/")
 
 # Additional directories which hold static files
 _DEFAULT_STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static"),
+    os.path.join(PROJECT_ROOT, "static/"),
 ]
 
 STATICFILES_DIRS = os.getenv('STATICFILES_DIRS', _DEFAULT_STATICFILES_DIRS)
@@ -214,7 +226,7 @@ STATICFILES_DIRS = os.getenv('STATICFILES_DIRS', _DEFAULT_STATICFILES_DIRS)
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Location of translation files
@@ -576,7 +588,7 @@ NOSE_ARGS = [
 #
 # GeoNode specific settings
 #
-SITEURL = os.getenv('SITEURL', "http://localhost:8000/")
+SITEURL = os.getenv('SITEURL', "http://sammlung.woldan.oeaw.ac.at")
 
 USE_QUEUE = strtobool(os.getenv('USE_QUEUE', 'False'))
 
@@ -600,7 +612,7 @@ GEOSERVER_LOCATION = os.getenv(
     'GEOSERVER_LOCATION', 'http://localhost:8080/geoserver/'
 )
 GEOSERVER_PUBLIC_LOCATION = os.getenv(
-    'GEOSERVER_PUBLIC_LOCATION', 'http://localhost:8080/geoserver/'
+    'GEOSERVER_PUBLIC_LOCATION', 'http://sammlung.woldan.oeaw.ac.at/geoserver/'
 )
 
 GEOFENCE_SECURITY_ENABLED = False if TEST and not INTEGRATION else True
@@ -618,7 +630,7 @@ OGC_SERVER = {
         # the entire block has to be overridden in the local_settings
         'PUBLIC_LOCATION': GEOSERVER_PUBLIC_LOCATION,
         'USER': 'admin',
-        'PASSWORD': 'geoserver',
+        'PASSWORD': 'woldan1989',
         'MAPFISH_PRINT_ENABLED': True,
         'PRINT_NG_ENABLED': True,
         'GEONODE_SECURITY_ENABLED': True,

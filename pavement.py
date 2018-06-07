@@ -350,6 +350,7 @@ def start_django():
     bind = options.get('bind', '')
     foreground = '' if options.get('foreground', False) else '&'
     sh('python manage.py runserver %s %s' % (bind, foreground))
+    #sh('uwsgi --socket 127.0.0.1:8000 --chdir /code/woldan --wsgi-file geonode/wsgi.py --master --processes 8 --threads 4  -b 32768 --protocol=http')
 
 
 @cmdopts([
@@ -418,7 +419,7 @@ def start_geoserver(options):
             javapath = 'START /B "" "' + javapath_opt + '"'
 
         sh((
-            '%(javapath)s -Xmx1024m -XX:MaxPermSize=2048m'
+            '%(javapath)s -Xms4G -Xmx16G '
             ' -DGEOSERVER_DATA_DIR=%(data_dir)s'
             # workaround for JAI sealed jar issue and jetty classloader
             ' -Dorg.eclipse.jetty.server.webapp.parentLoaderPriority=true'
