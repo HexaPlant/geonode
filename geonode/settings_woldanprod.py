@@ -206,7 +206,7 @@ LOCAL_MEDIA_URL = os.getenv('LOCAL_MEDIA_URL', "/uploaded/")
 # Example: "/home/media/media.lawrence.com/apps/"
 
 STATIC_ROOT = os.getenv('STATIC_ROOT',
-                        os.path.join(PROJECT_ROOT, "/code/woldan/geonode/static")
+                        os.path.join(PROJECT_ROOT, "/code/woldan/geonode/static_root")
                         )
 
 
