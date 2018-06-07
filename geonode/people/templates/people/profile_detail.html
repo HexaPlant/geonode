@@ -30,7 +30,7 @@
 
 <div class="col-xs-9 col-md-7 profile-details">
 
-{% if user.is_authenticated %}
+{% if user.is_superuser %}
 {% if user == profile %}
   {% for group in profile.group_list_all %}
   <div ng-if="group.logo != ''" class="col-xs-1 pull-right group-logo">
@@ -56,7 +56,7 @@
   </div> -->
   {% endfor %}
 {% endif %}
-{% endif %}
+
 
   <h3>{{ profile.first_name|default:profile.name_long }}</h3>
   <table class="table table-user-profile">
@@ -113,6 +113,7 @@
       </tr>
     </tbody>
   </table>
+  {% endif %}
 </div>
 
 <div class="col-xs-12 col-md-3">
