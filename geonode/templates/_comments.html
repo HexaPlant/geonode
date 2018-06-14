@@ -5,6 +5,8 @@
 {% load friendly_loader %}
 {% load i18n %}
 {% friendly_load avatar_tags %}
+{% load markdown_deux_tags %}
+
 
 {% load i18n %}
 <div id="comments_section" class="comments paginate paginate-manual">
@@ -29,7 +31,7 @@
       <li class="comment">
         <a class="avatar" href="{{ comment.author.get_absolute_url }}">{% avatar comment.author 48 %}</a>
         <small>{% trans 'By' %} <a href="{{ comment.author.get_absolute_url }}" rel="author">{{ comment.author }}</a> on <time>{{ comment.submit_date|date:"M j, Y" }}</time></small>
-        <p>{{ comment.comment }}</p>
+        <p>{{ comment.comment | markdown }}</p>
         {% if comment|can_delete_comment:request.user %}
         <form method="POST" action="{% url 'delete_comment' comment.id %}">
           {% csrf_token %}
