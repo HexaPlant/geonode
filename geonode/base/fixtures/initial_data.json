@@ -16,7 +16,7 @@
         "fields": {
             "description": "legal land descriptions. Examples: political and administrative boundaries",
             "gn_description": "Boundaries",
-            "is_choice"is_choice": false,
+            "is_choice": false,
             "fa_class": "fa-ellipsis-h",
             "identifier": "boundaries"
         }
