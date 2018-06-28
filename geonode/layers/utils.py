@@ -449,6 +449,7 @@ def file_upload(filename, name=None, user=None, title=None, abstract=None,
     # set metadata
     if 'xml' in files:
         with open(files['xml']) as f:
+            logger.debug("Processing metadata from %s"%f)
             xml_file = f.read()
         defaults['metadata_uploaded'] = True
         defaults['metadata_uploaded_preserve'] = metadata_uploaded_preserve
@@ -513,6 +514,18 @@ def file_upload(filename, name=None, user=None, title=None, abstract=None,
         # Pass the parameter overwrite to tell whether the
         # geoserver_post_save_signal should upload the new file or not
         layer.overwrite = overwrite
+        layer.title = defaults.get('title', None)
+        layer.abstract = defaults.get('abstract', None)
+        layer.purpose = defaults.get('purpose', None)
+        layer.denominator = defaults.get('denominator', None)
+        layer.supplemental_information = defaults.get('supplemental_information', None)
+        layer.constraints_other = defaults.get('constraints_other', None)
+        layer.topic_category = defaults.get('topic_category', None)
+        layer.category = defaults.get('category', None)
+        layer.keywords.clear()
+        layer.regions.clear()
+
+
         layer.save()
 
     # Assign the keywords (needs to be done after saving)
@@ -690,13 +703,13 @@ def create_thumbnail(instance, thumbnail_remote_url, thumbnail_create_url=None,
 
         thumbnail_create_url_new ="http://iiif.woldan.oeaw.ac.at?IIIF=%s.tif/full/,512/0/default.jpg"%name
 
-        logger.info ("Try to fetch thumbnail from % s"%thumbnail_create_url_new)
+        logger.info ("Try to fetch thumbnail from %s"%thumbnail_create_url_new)
 
         request = requests.get(thumbnail_create_url_new)
         if request.status_code == 200:
             thumbnail_create_url = thumbnail_remote_url = thumbnail_create_url_new
 
-        logger.info ("Fetching thumbnail from % s"%thumbnail_remote_url)
+        logger.info ("Fetching thumbnail from %s"%thumbnail_remote_url)
 
     except AttributeError:
         pass

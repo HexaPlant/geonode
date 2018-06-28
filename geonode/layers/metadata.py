@@ -63,11 +63,11 @@ def set_metadata(xml):
     else:
         raise RuntimeError('Unsupported metadata format')
 
-    print "Importing",identifier
-    print "Date", vals["date"]
-    #print "Values", vals
-    #print "Regions",regions
-    #print "Keywords",keywords
+    # print "Importing",identifier
+    # print "Date", vals["date"]
+    # print "Values", vals
+    # print "Regions",regions
+    # print "Keywords",keywords
 
     if not vals.get("date"):
         vals["date"] = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
@@ -91,6 +91,7 @@ def iso2dict(exml):
     if hasattr(mdata, 'identification'):
         vals['title'] = mdata.identification.title
         vals['abstract'] = mdata.identification.abstract
+        print 'Abstract',mdata.identification.abstract
         vals['purpose'] = mdata.identification.purpose
         if mdata.identification.supplementalinformation is not None:
             vals['supplemental_information'] = \
