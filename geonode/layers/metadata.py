@@ -91,7 +91,7 @@ def iso2dict(exml):
     if hasattr(mdata, 'identification'):
         vals['title'] = mdata.identification.title
         vals['abstract'] = mdata.identification.abstract
-        print 'Abstract',mdata.identification.abstract
+        # print 'Abstract',mdata.identification.abstract
         vals['purpose'] = mdata.identification.purpose
         if mdata.identification.supplementalinformation is not None:
             vals['supplemental_information'] = \
@@ -118,7 +118,7 @@ def iso2dict(exml):
 
         vals['purpose'] = mdata.identification.purpose
 
-        print 'Denominator',mdata.identification.denominators
+        #print 'Denominator',mdata.identification.denominators
         if mdata.identification.denominators:
             vals['denominator'] = mdata.identification.denominators[0]
 
